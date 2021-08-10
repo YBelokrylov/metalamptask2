@@ -21,7 +21,7 @@ function removeClassFocus(element, box) {
 
     let itsElement = target == element || element.contains(target);
     let itsArrowButton;
-    if (itsArrowButton) {
+    if (ArrowButton) {
       itsArrowButton = ArrowButton.contains(target);
     }
 

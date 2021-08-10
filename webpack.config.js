@@ -19,7 +19,7 @@ module.exports = {
             use: [
               {
                 loader: 'bemdecl-to-fs-loader',
-                options: { levels: ['commonBlocks'], extensions: ['css', 'js'] } // Add css and js files of BEM entities to bundle
+                options: { levels: ['commonBlocks'], extensions: ['js', 'css'], } // Add css and js files of BEM entities to bundle
               },
               { loader: 'html2bemdecl-loader' }, // convert HTML to bem DECL format
               {
@@ -46,7 +46,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+            },
+          }
+        ],
       },
     ]
 

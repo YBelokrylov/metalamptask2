@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("font/Montserrat-Bold.ttf") format("ttf"), url("font/Montserrat-Bold.woff") format("woff"), url("font/Montserrat-Bold.svg") format("svg");
+  font-weight: bold;
+}
+
+.text_type_bold {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
