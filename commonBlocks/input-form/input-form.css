@@ -9,7 +9,7 @@
 .input-form__box {
   display: grid;
   grid-template-columns: auto;
-  grid-auto-columns: 44px;
+  grid-auto-columns: 24px;
   grid-auto-flow: column;
   height: 44px;
   padding: 12px 15px 8px;
@@ -35,7 +35,7 @@
   border-color: rgba(31, 32, 65, 0.5);
 }
 
-.input-form__box > :last-child {
+.input-form__box> :last-child {
   margin-top: -2px;
   justify-self: end;
 }
