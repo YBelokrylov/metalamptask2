@@ -41,6 +41,11 @@
   line-height: 18px;
 }
 
+.text_size_18 {
+  font-size: 18px;
+  line-height: 22px;
+}
+
 .text_size_large {
   font-size: 19px;
   line-height: 23px;

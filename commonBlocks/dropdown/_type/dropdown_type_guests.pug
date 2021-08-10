@@ -1,0 +1,29 @@
+include ../../text-button/text-button.pug
+
+mixin dropdownGuests
+  div(class="input-form dropdown dropdown_type_guests")
+
+    span(class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase") Гости
+      
+    div(class="input-form__box input-form__box_size_l dropdown__head")
+      div(class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75") Сколько гостей
+      div(type="button" class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75") expand_more
+    div(class="dropdown__list")
+
+      mixin dropdown__line(option)
+        div(class="dropdown__line")
+          span(class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase")= option
+          button(name="value-decrease" class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" disabled) 
+            | -
+          span(class="dropdown__value text text_type_bold text_size_small text_dark-shade_100") 0
+          button(name="value-increase"
+          class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50")
+            | +   
+
+      +dropdown__line("взрослые")
+      +dropdown__line("дети")
+      +dropdown__line("младенцы")
+
+      .dropdown__text-buttons
+        +textButton("очистить", ["dropdown__clear-form", "text-button_disabled"])
+        +textButton("применить", "dropdown__confirm-form")

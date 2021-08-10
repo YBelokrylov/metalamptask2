@@ -1,0 +1,29 @@
+mixin dropdownRoomComfort
+  div(class="input-form dropdown dropdown_type_room-comfort")
+    span(class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase") Удобства номера
+
+    div(class="input-form__box input-form__box_size_m dropdown__head")
+      span(class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75")
+        | 2 спальни, 2 кровати...
+      span(type="button" class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75")
+        | expand_more
+
+    div(class="dropdown__list")
+      mixin dropdown__line(option, value)
+        -
+          let isDisabled = false
+          if (value === "0") isDisabled = true
+
+        div(class="dropdown__line")
+          span(class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase")= option
+          button(name="value-decrease" class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50", disabled=isDisabled)
+            | -
+          span(class="dropdown__value text text_type_bold text_size_small text_dark-shade_100")= value
+          button(name="value-increase"
+          class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50")
+            | +
+
+      +dropdown__line("спальни", "2")
+      +dropdown__line("кровати", "2")
+      +dropdown__line("ванные комнаты", "0")
+    

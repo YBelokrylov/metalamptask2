@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../dropdown.css">
+    <link rel="stylesheet" href="../__button/dropdown__button.css">
+  </head>
+  <body> 
+        <div class="input-form dropdown dropdown_type_room-comfort"><span class="input-form__title text-bold">Удобства номера</span>
+          <div class="input-form__box input-form__box_size_m dropdown__head"><span class="dropdown__input text-regular  text-regular_dark_h">2 спальни, 2 кровати...</span><span class="dropdown__expand-more material-icons material-icons_dark_h" type="button">expand_more</span></div>
+          <div class="dropdown__list">
+                    <div class="dropdown__line"><span class="dropdown__option text-bold">спальни</span>
+                      <button class="dropdown__button text-regular text-regular_size_l text-regular_dark_m" name="value-decrease">-</button><span class="dropdown__value text-bold">2</span>
+                      <button class="dropdown__button text-regular text-regular_size_l text-regular_dark_m" name="value-increase">+</button>
+                    </div>
+                    <div class="dropdown__line"><span class="dropdown__option text-bold">кровати</span>
+                      <button class="dropdown__button text-regular text-regular_size_l text-regular_dark_m" name="value-decrease">-</button><span class="dropdown__value text-bold">2</span>
+                      <button class="dropdown__button text-regular text-regular_size_l text-regular_dark_m" name="value-increase">+</button>
+                    </div>
+                    <div class="dropdown__line"><span class="dropdown__option text-bold">ванные комнаты</span>
+                      <button class="dropdown__button text-regular text-regular_size_l text-regular_dark_m" name="value-decrease" disabled>-</button><span class="dropdown__value text-bold">0</span>
+                      <button class="dropdown__button text-regular text-regular_size_l text-regular_dark_m" name="value-increase">+</button>
+                    </div>
+          </div>
+        </div>
+    <script src="../__button/dropdown__button.js"></script>
+    <script src="../dropdown.js"></script>
+    <script src="dropdown_type_room-comfort.js"> </script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+mixin dropdown(title, text)
+  div(class="input-form dropdown")
+    div(class="input-form__title text-bold")= title
+      
+    div(class="input-form__box input-form__box_size_l dropdown__head")
+      div(class="dropdown__input text-regular  text-regular_dark_h")= text
+      div(type="button" class="dropdown__expand-more material-icons material-icons_dark_h") expand_more

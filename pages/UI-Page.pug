@@ -5,7 +5,9 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
-    include ../commonBlocks/text-form/text-form.pug
+    include ../commonBlocks/text-form/text-form
+    include ../commonBlocks/dropdown/_type/dropdown_type_guests
+    include ../commonBlocks/dropdown/_type/dropdown_type_room-comfort
   body
     -
       textForm = {
@@ -16,3 +18,7 @@ html(lang="en")
         isSubscription: true
       }
     +text-form(textForm)
+
+    +dropdownGuests
+
+    +dropdownRoomComfort
