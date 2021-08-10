@@ -1,0 +1,21 @@
+-
+  let textForm = {
+    type: "Type",
+    name: "Name",
+    placeholder: "Placeholder",
+    title: "Title",
+    isSubscription: false
+  }
+
+mixin text-form(textForm) 
+  div(class="input-form text-form")
+    label
+      if textForm.title
+        div(class="input-form__title text-bold")= textForm.title
+
+      div(class="input-form__box input-form__box_size_l")
+        input(type=textForm.type name=textForm.name class="text-form__input text-regular" placeholder=textForm.placeholder)
+        
+        if textForm.isSubscription
+          button(type="button" class="text-form__arrow material-icons gradient-text") 
+            | arrow_forward
