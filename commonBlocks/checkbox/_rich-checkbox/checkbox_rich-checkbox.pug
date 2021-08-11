@@ -21,7 +21,7 @@ mixin rich-checkbox-group(richCheckboxGroup)
             span(class="checkbox__mark")
           div(class="checkbox__value checkbox__value_rich-checkbox")
             span(class="text text_type_bold text_size_medium text_dark-shade_75")= checkboxTitle
-            span(class="text text_type_regular text_size_medium material-icons_dark-shade_50")= checkboxText
+            span(class="text text_type_regular text_size_small text_dark-shade_50")= checkboxText
 
       each checkboxText, checkboxTitle in richCheckboxGroup.checkboxValues
         +checkbox__line(checkboxTitle, checkboxTitle, checkboxText, richCheckboxGroup.groupName)
