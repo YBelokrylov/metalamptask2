@@ -1,0 +1,29 @@
+-
+  let checkboxGroup = {
+    groupTitle: "expandable checkbox list",
+    groupName: "HotelRules",
+    checkboxValues: [
+       "Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"
+    ],
+    isExpandable: true
+  };
+
+mixin checkboxGroup(checkboxGroup)
+  div(class="checkbox" class=checkboxGroup.isExpandable ? "checkbox_rich":"")
+
+    .checkbox__header
+      span(class="checkbox__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase")= checkboxGroup.groupTitle
+      if (checkboxGroup.isExpandable) 
+          div(class="checkbox__expand-more material-icons material-icons_size_m material-icons_dark-shade_50")
+            | expand_more
+
+    .checkbox__list
+      mixin checkboxLine(checkboxText, value, name)
+        label(class="checkbox__line")
+          input(type="checkbox" name=name value=value class="checkbox__input")
+          span(class="checkbox__border")
+            span(class="checkbox__mark")
+          div(class="checkbox__value text text_type_regular text_size_medium material-icons_dark-shade_50")= checkboxText
+
+      each checkboxValue in checkboxGroup.checkboxValues
+        +checkboxLine(checkboxValue, checkboxValue, checkboxGroup.groupName)
