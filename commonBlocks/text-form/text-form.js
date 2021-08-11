@@ -1,10 +1,10 @@
-let inputForms = document.querySelectorAll('.input-form');
+let textForms = document.querySelectorAll('.text-form');
 
-for (let inputForm of inputForms) {
-  let inputFormBox = inputForm.querySelector('.input-form__box');
+for (let textForm of textForms) {
+  let inputFormBox = textForm.querySelector('.input-form__box');
 
-  inputForm.addEventListener('click', addClassFocus(inputFormBox));
-  document.addEventListener('click', removeClassFocus(inputForm, inputFormBox));
+  textForm.addEventListener('click', addClassFocus(inputFormBox));
+  document.addEventListener('click', removeClassFocus(textForm, inputFormBox));
 }
 
 function addClassFocus(element) {
@@ -30,5 +30,3 @@ function removeClassFocus(element, box) {
     }
   };
 }
-
-
