@@ -12,6 +12,8 @@ html(lang="en")
     include ../commonBlocks/checkbox/checkbox
     include ../commonBlocks/room-features/room-features
     include ../commonBlocks/radio-button-group/radio-button-group
+    include ../commonBlocks/toggle/toggle
+
     style
       | h3 {margin-bottom: 16px;}
 
@@ -38,3 +40,6 @@ html(lang="en")
 
     h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") Radio Buttons
     +radioButtonGroup(radioButtonGroup)
+
+    h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") Toggle
+    +toggle("specialOffers", "Получать спецпредложения", true)

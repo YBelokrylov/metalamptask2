@@ -1,0 +1,8 @@
+mixin toggle(name, text, isChecked)
+  label(class="toggle")
+    input(type="checkbox" name=name class="toggle__input" checked=isChecked)
+    span(class="toggle__border")
+      span(class="toggle__mark")
+    span(class="toggle__value text text_type_regular text_size_medium text_dark-shade_75")= text
+
+
