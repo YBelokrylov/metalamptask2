@@ -1,0 +1,21 @@
+-
+  let radioButtonGroup = {
+    groupName: "gender",
+    values: ["Мужчина", "Женщина"]
+  };
+
+mixin radioButtonGroup(radioButtonGroup)
+  div(class="radio-button-group")
+  
+    mixin radioButton(groupName, value)
+      label(class="radio-button-group__label")
+        input( type="radio" name=groupName class="radio-button-group__input" value=value)
+        span(class="radio-button-group__border")
+          span(class="radio-button-group__mark")
+        span(class="radio-button-group__value text text_type_regular text_size_medium text_dark-shade_50")= value
+
+    each value in radioButtonGroup.values
+      +radioButton(radioButtonGroup.groupName, value)
+
+
+  
