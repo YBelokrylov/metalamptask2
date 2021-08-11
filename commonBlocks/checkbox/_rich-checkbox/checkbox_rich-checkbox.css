@@ -1,0 +1,9 @@
+.checkbox_rich-checkbox {
+  width: 266px;
+}
+
+.checkbox__value_rich-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

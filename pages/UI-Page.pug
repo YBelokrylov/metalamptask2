@@ -10,11 +10,13 @@ html(lang="en")
     include ../commonBlocks/dropdown/_type/dropdown_type_room-comfort
     include ../commonBlocks/date-dropdown/date-dropdown
     include ../commonBlocks/checkbox/checkbox
+    include ../commonBlocks/checkbox/_rich-checkbox/checkbox_rich-checkbox
     include ../commonBlocks/room-features/room-features
     include ../commonBlocks/radio-button-group/radio-button-group
     include ../commonBlocks/toggle/toggle
     include ../commonBlocks/like-button/like-button
     include ../commonBlocks/rate-button/rate-button
+
 
 
     style
@@ -53,3 +55,5 @@ html(lang="en")
     h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") rate button
     +rate-button("room-254", 4, true)
     +rate-button("room-255", 5, false)
+
+    +rich-checkbox-group(richCheckboxGroup)
