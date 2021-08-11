@@ -1,0 +1,23 @@
+.rate-button {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 120px;
+}
+
+.rate-button__radio {
+  position: absolute;
+  appearance: none;
+}
+
+.rate-button__star::after {
+  content: "star_border";
+  cursor: pointer;
+}
+
+.rate-button__radio:checked~.rate-button__star::after {
+  content: "star";
+}
+
+.rate-button__radio:disabled~.rate-button__star::after {
+  cursor: auto;
+}

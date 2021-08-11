@@ -1,0 +1,17 @@
+mixin rate-button(ratingName, currentRating, isDisabled)
+  div(class="rate-button")
+    mixin rate-button__star(value, id, name, isChecked)
+      -
+        let starId = name + "-id" + id
+        let starName = "rating-for-" + name
+
+      input(class="rate-button__radio" type="radio" name=starName value=value id=starId checked=isChecked disabled=isDisabled)
+      label(class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for=starId)
+
+    -for (let i = 5; i > 0; i--) 
+      if (i === currentRating) 
+        +rate-button__star(i, i, ratingName, true)
+        -continue 
+
+      +rate-button__star(i, i, ratingName)
+      
