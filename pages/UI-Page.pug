@@ -18,6 +18,10 @@ html(lang="en")
     include ../commonBlocks/rate-button/rate-button
     include ../commonBlocks/comment/comment
     include ../commonBlocks/bullet-list/bullet-list
+    include ../commonBlocks/price-range/price-range
+    include ../commonBlocks/radius-button/_default/radius-button_default
+    include ../commonBlocks/radius-button/_border-gradient/radius-button_border-gradient
+    include ../commonBlocks/radius-button/_link/radius-button_link
 
     style
       | h3 {margin-bottom: 16px;}
@@ -61,3 +65,10 @@ html(lang="en")
     +comment(commentData)
 
     +bulletList(bulletList)
+
+    +price-range
+
+    h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") buttons 
+    +radius-button_default("click")
+    +radius-button_border-gradient("click")
+    +radius-button_link("click")

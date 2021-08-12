@@ -1,0 +1,18 @@
+.radius-button_border-gradient {
+  top: 0.5px;
+}
+
+.radius-button_border-gradient::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 1;
+
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+
+  background: #ffffff;
+  border-radius: 22px;
+}
