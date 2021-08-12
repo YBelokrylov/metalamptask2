@@ -1,0 +1,33 @@
+.bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 0;
+  margin-top: 12px;
+
+  padding: 0;
+  list-style: none;
+}
+
+.bullet-list__item {
+  position: relative;
+
+  margin-left: 20px;
+
+  line-height: 24px;
+}
+
+.bullet-list__item::before {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  left: -20px;
+
+  width: 10px;
+  height: 10px;
+
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 5px;
+}

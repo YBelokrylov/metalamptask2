@@ -1,0 +1,19 @@
+-
+  let bulletList = {
+    title: "Bullet List",
+    items: [
+      "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"
+    ]
+  };
+
+mixin bulletList(bulletList)
+  div(class="bullet-list_container")
+    span(class="bullet-list__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase")= bulletList.title
+    ul(class="bullet-list")
+
+      mixin bulletListItem(text)
+        li(class="bullet-list__item text text_type_regular text_size_medium text_dark-shade_75")= text
+
+      each bulletListItem in bulletList.items
+        +bulletListItem(bulletListItem)
+
