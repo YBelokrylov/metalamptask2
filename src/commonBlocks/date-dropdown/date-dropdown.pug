@@ -1,7 +1,10 @@
 include ../dropdown/dropdown
 
+-
+  let dateDropdowns = [{title: "прибытие", date: "ДД.ММ.ГГГГ"}, {title: "выезд", date: "ДД.ММ.ГГГГ"}];
+
 mixin dateDropdown
   .date-dropdown
-    +dropdown("date Dropdown", "ДД.ММ.ГГГГ", "input-form__box_size_s")
-    +dropdown("date Dropdown", "19.08.2019", "input-form__box_size_s")
+    each dateDropdown in dateDropdowns
+      +dropdown(dateDropdown.title, dateDropdown.date, "input-form__box_size_s")
 
