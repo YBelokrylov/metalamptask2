@@ -1,0 +1,36 @@
+//-include ..\dropdown\dropdown
+//-include ..\buttons\radius-button\radius-button_link
+//-include ..\dropdown\dropdown_type_guests\dropdown_type_guests
+
+.booking-card
+  .booking-card__header
+    span(class="booking-card__number text text_type_bold text_size_large text_dark-shade_100") 
+      span(class="text_size_medium") №
+      |888
+    span(class="booking-card__lux text text_type_bold text_size_small text_color_purple text_uppercase") люкс
+    span(class="booking-card__price-per-day text text_type_bold text_size_medium text_dark-shade_50") 
+      |9 990₽ 
+      span(class="text_type_regular text_size_small") в сутки
+
+  +dateDropdown
+
+  +dropdownGuests
+
+  .booking-card__check
+    .booking-card__check-line
+      span(class="text text_type_regular text_size_medium text_dark-shade_75") 9 990₽ х 4 суток
+      span
+      span(class="text text_type_regular text_size_medium text_dark-shade_75") 39 960₽
+    .booking-card__check-line
+      span(class="text text_type_regular text_size_medium text_dark-shade_75") Сбор за услуги: скидка 2 179₽
+      span(class="booking-card__check-info text text_type_bold text_dark-shade_25 text_size_small") i
+      span(class="text text_type_regular text_size_medium text_dark-shade_75") 0₽
+    .booking-card__check-line
+      span(class="text text_type_regular text_size_medium text_dark-shade_75") Сбор за дополнительные услуги
+      span(class="booking-card__check-info text text_type_bold text_dark-shade_25 text_size_small") i
+      span(class="text text_type_regular text_size_medium text_dark-shade_75") 300₽
+    .booking-card__check-total
+      span(class="text text_type_bold text_dark-shade_100 text_size_large") Итого
+      span(class="text text_type_bold text_dark-shade_100 text_size_large") 38 081₽
+
+  +radius-button_link("Забронировать")
