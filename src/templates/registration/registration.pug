@@ -1,0 +1,63 @@
+//-include ../../commonBlocks/text-form/text-form
+//-include ../../commonBlocks/radio-button-group/radio-button-group
+include ../../commonBlocks/toggle/toggle
+include ../../commonBlocks/radius-button/_link/radius-button_link
+include ../../commonBlocks/radius-button/_border-gradient/radius-button_border-gradient
+
+.registration
+  h1(class="registration__header registration__two-column text text_type_bold text_size_huge text_dark-shade_100")
+    | Регистрация аккаунта
+
+  .registration__block
+    -
+      let textFormName = {
+        type: "text",
+        name: "Name",
+        placeholder: "Имя",
+        title: "",
+        isSubscription: false
+      }
+      let textFormSurname = {
+        type: "text",
+        name: "Surname",
+        placeholder: "Фамилия",
+        title: "",
+        isSubscription: false
+      }
+    +text-form(textFormName)
+    +text-form(textFormSurname)
+
+    -
+      let radioButtonGroupGender = {
+        groupName: "gender",
+        values: ["Мужчина", "Женщина"]
+      };
+    +radioButtonGroup(radioButtonGroup)
+
+  .registration__block
+    -
+      let textFormBirthday = {
+        type: "email",
+        name: "Email",
+        placeholder: "Email",
+        title: "данные для входа в сервис",
+        isSubscription: false
+      }
+      let textFormPassword = {
+        type: "text",
+        name: "Password",
+        placeholder: "Пароль",
+        title: "",
+        isSubscription: false
+      }
+    +text-form(textFormBirthday)
+    +text-form(textFormPassword)
+    +toggle("get-special-offers", "Получать спецпредложения", true)
+
+  +radius-button_link("перейти к оплате")
+
+  .registration__footer
+    span(class="text text_type_regular text_size_medium text_dark-shade_100")
+      | Уже есть аккаунт на Toxin
+
+    +radius-button_border-gradient("Войти")
