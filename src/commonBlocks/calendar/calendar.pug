@@ -1,0 +1,59 @@
+include ..\text-button\text-button
+
+mixin calendar
+  .calendar
+    header(class="calendar__header")
+      button(type="button" class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m") arrow_back
+      span(class="text text_type_bold text_size_large text_dark-shade_100") Август 2019
+      button(type="button" class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m") arrow_forward
+
+    .calendar__main
+      div(class="calendar__days-line text text_type_bold text_size_small text_color_purple")
+        mixin calendar__week-day(dayName)
+          span(class="calendar__week-day")= dayName
+
+        -let dayNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+        each dayName in dayNames
+          +calendar__week-day(dayName)
+
+      div(class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50")
+        mixin calendar__day(number, classes)
+          span(class=["calendar__day"] class=classes)= number
+
+        -for (let i = 29; i < 32; i++)
+          +calendar__day(i, "text-regular_dark_s")
+
+        -for (let i = 1; i < 5; i++)
+          +calendar__day(i)
+
+      div(class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50")
+        -for (let i = 5; i < 12; i++)
+          if (i === 8) 
+            +calendar__day(i, "calendar__today")
+            -continue 
+
+          +calendar__day(i)
+      
+      div(class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50")
+        -for (let i = 12; i < 19; i++)
+          +calendar__day(i)
+
+      div(class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50")
+        +calendar__day("19", ["calendar__selected-edge-day", "calendar__selected-left-edge-day"])
+
+        -for (let i = 20; i < 23; i++)
+          +calendar__day(i, "calendar__selected-day")
+
+        +calendar__day("23", ["calendar__selected-edge-day", "calendar__selected-right-edge-day"])
+        +calendar__day("24")
+        +calendar__day("25")
+      
+      div(class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50")
+        -for (let i = 26; i < 32; i++)
+          +calendar__day(i)
+        
+        +calendar__day("1", "text-regular_dark_s")
+      
+      .calendar__footer
+        +textButton("Очистить")
+        +textButton("Применить")
