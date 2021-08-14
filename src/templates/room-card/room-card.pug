@@ -1,0 +1,27 @@
+//-include ../../star-rating/star-rating.pug
+
+.room-card
+  .room-card__gallery
+    span(class="material-icons material-icons_color_white material-icons_size_m room-card__chevron") chevron_left
+    span(class="material-icons material-icons_color_white material-icons_size_m room-card__chevron") chevron_right
+    .room-card__slider
+      div(class="room-card__slider-circle room-card__slider-circle_active")
+      .room-card__slider-circle
+      .room-card__slider-circle
+      .room-card__slider-circle
+
+  .room-card__info
+    .room-card__line
+      span(class="booking-card__number text text_type_bold text_size_large text_dark-shade_100") 
+        span(class="text_size_medium") №
+        |888
+      span(class="booking-card__lux text text_type_bold text_size_small text_color_purple text_uppercase") люкс
+      span(class="booking-card__price-per-day text text_type_bold text_size_medium text_dark-shade_50") 
+        |9 990₽ 
+        span(class="text_type_regular text_size_small") в сутки
+
+    div(class="room-card__line room-card__rating")
+      +rate-button("room-888", 4, true)
+      span(class="booking-card__price-per-day text text_type_bold text_size_medium text_dark-shade_50") 
+        |65 
+        span(class="text_type_regular text_size_small") Отзывов

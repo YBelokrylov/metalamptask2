@@ -1,0 +1,90 @@
+.room-card {
+  width: 270px;
+  height: 257px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+}
+
+.room-card__gallery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 151px;
+  background-image: url("room-card.png");
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.room-card__chevron {
+  display: grid;
+  place-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  cursor: pointer;
+}
+
+.room-card__slider {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+
+  display: flex;
+  gap: 3.75px;
+}
+
+.room-card__slider-circle {
+  width: 7.5px;
+  height: 7.5px;
+
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+  cursor: pointer;
+}
+
+.room-card__slider-circle_active {
+  background: #FFFFFF;
+}
+
+.room-card__info {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  align-content: space-between;
+
+  padding: 20px;
+}
+
+.room-card__info::after {
+  position: absolute;
+  left: 20px;
+  top: 53px;
+  content: "";
+
+  width: 230px;
+  height: 1px;
+
+  background: rgba(31, 32, 65, 0.1);
+}
+
+.room-card__line {
+  display: flex;
+  gap: 1px;
+  align-items: baseline;
+}
+
+.room-card__price-per-day {
+  margin-left: auto;
+}
+
+.room-card__rating {
+  justify-content: space-between;
+  align-items: center;
+}
