@@ -40,6 +40,7 @@ function removeDateInterval() {
     day.classList.remove('calendar__selected-day', 'calendar__selected-edge-day', 'calendar__selected-left-edge-day', 'calendar__selected-right-edge-day')
   }
 
+  edgeDays.splice(0, 2);
   days[today].classList.add('calendar__today');
 }
 
@@ -48,9 +49,6 @@ function posCollection(position) {
     if (edgeDays.push(position) === 2) {
       createDateInterval(edgeDays[0], edgeDays[1]);
     } else if (edgeDays.length === 3) {
-      removeDateInterval();
-      edgeDays.splice(0, 2);
-    } else {
       removeDateInterval();
     }
 
