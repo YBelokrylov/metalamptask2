@@ -34,9 +34,19 @@ include ../../commonBlocks/radius-button/_border-gradient/radius-button_border-g
       };
     +radioButtonGroup(radioButtonGroup)
 
+  -
+    let textFormBirthday = {
+      type: "text",
+      name: "Birthday",
+      placeholder: "ДД.ММ.ГГГГ",
+      title: "дата рождения",
+      isSubscription: false
+    }
+  +text-form(textFormBirthday)
+
   .registration__block
     -
-      let textFormBirthday = {
+      let textFormEmail = {
         type: "email",
         name: "Email",
         placeholder: "Email",
@@ -50,7 +60,7 @@ include ../../commonBlocks/radius-button/_border-gradient/radius-button_border-g
         title: "",
         isSubscription: false
       }
-    +text-form(textFormBirthday)
+    +text-form(textFormEmail)
     +text-form(textFormPassword)
     +toggle("get-special-offers", "Получать спецпредложения", true)
 

@@ -6,6 +6,10 @@
   outline: none;
 }
 
+.input-form__box_focused>.text-form__input {
+  color: rgba(31, 32, 65, 0.5);
+}
+
 .text-form__arrow {
   cursor: pointer;
   border: none;

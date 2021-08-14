@@ -1,0 +1,31 @@
+.sign-in {
+  display: grid;
+  gap: 20px;
+
+  width: 380px;
+  height: 358px;
+
+  padding: 40px 30px 30px 30px;
+
+  background: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.sign-in__header {
+  margin: 0;
+}
+
+.sign-in__block {
+  display: grid;
+  gap: 10px;
+}
+
+.sign-in__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  margin-top: 10px;
+}

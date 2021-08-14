@@ -1,0 +1,32 @@
+//-include ../../commonBlocks/text-form/text-form
+//-include ../../commonBlocks/buttons/radius-button/_link/radius-button_link
+//-include ../../commonBlocks/buttons/radius-button/_border-gradient/radius-button_border-gradient
+
+.sign-in
+  h1(class="sign-in__header text text_type_bold text_size_huge text_dark-shade_100") Войти
+
+  .sign-in__block
+    -
+      let textFormEmailSignIn = {
+        type: "email",
+        name: "Email",
+        placeholder: "Email",
+        title: "",
+        isSubscription: false
+      }
+      let textFormPasswordSignIn = {
+        type: "text",
+        name: "Password",
+        placeholder: "Пароль",
+        title: "",
+        isSubscription: false
+      }
+    +text-form(textFormEmailSignIn)
+    +text-form(textFormPasswordSignIn)
+
+  +radius-button_link("Войти")
+  
+  .sign-in__footer
+    span(class="text text_type_regular text_size_medium text_dark-shade_100") Нет аккаунта на Toxin?
+
+    +radius-button_border-gradient("Создать")
