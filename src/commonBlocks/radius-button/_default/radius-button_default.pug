@@ -1,3 +1,3 @@
-mixin radius-button_default(name)
-  button(type="button" class="radius-button radius-button_size_small radius-button_link")
+mixin radius-button_default(name, size)
+  button(type="button" class="radius-button radius-button_link" class=(size ? size:"radius-button_size_small"))
     span(class="radius-button__text text text_type_bold text_size_small text_color_white text_uppercase")= name
