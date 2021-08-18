@@ -7,13 +7,13 @@
     isSubscription: false
   }
 
-mixin text-form(textForm) 
+mixin text-form(textForm, size) 
   div(class="input-form text-form")
     label
       if textForm.title
         div(class="input-form__title text text_dark-shade_100 text_size_small text_type_bold text_uppercase")= textForm.title
 
-      div(class="input-form__box input-form__box_size_l")
+      div(class="input-form__box" class=(size ? size:"input-form__box_size_l"))
         input(type=textForm.type name=textForm.name class="text-form__input text text_dark-shade_25 text_size_medium text_type_regular" placeholder=textForm.placeholder)
         
         if textForm.isSubscription
