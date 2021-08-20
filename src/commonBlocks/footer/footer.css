@@ -19,12 +19,12 @@
 .footer__item {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
 }
 
 .footer__logo {
   object-fit: none;
-  align-self: flex-start;
 }
 
 .footer__title {
