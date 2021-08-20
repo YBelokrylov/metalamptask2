@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   context: path.resolve(__dirname, 'pages'),
@@ -19,7 +20,7 @@ module.exports = {
             use: [
               {
                 loader: 'bemdecl-to-fs-loader',
-                options: { levels: ['src/commonBlocks', 'src/templates'], extensions: ['js', 'css'], } // Add css and js files of BEM entities to bundle
+                options: { levels: ['src/commonBlocks', 'src/templates'], extensions: ['js', 'css', 'jpg'], } // Add css and js files of BEM entities to bundle
               },
               { loader: 'html2bemdecl-loader' }, // convert HTML to bem DECL format
               {
@@ -65,6 +66,11 @@ module.exports = {
       filename: "./UI-Page/UI-Page.html",
       template: './UI-Page.pug',
       chunks: ['UI-Page']
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "images", to: "../dist/Ui-Page/images" },
+      ],
+    }),
   ]
 }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "devDependencies": {
     "bemdecl-to-fs-loader": "0.0.4",
+    "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "html2bemdecl-loader": "^1.0.5",
