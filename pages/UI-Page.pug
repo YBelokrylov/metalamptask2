@@ -30,15 +30,15 @@ html(lang="en")
       | h3 {margin-bottom: 16px;}
 
   body
-    -
-      textForm = {
+    +text-form(
+      {
         type: "text",
         name: "Email",
         placeholder: "Email",
         title: "Text Field",
-        isSubscription: true
+        isSubscription: false
       }
-    +text-form(textForm)
+    )
 
     +dropdownGuests
 

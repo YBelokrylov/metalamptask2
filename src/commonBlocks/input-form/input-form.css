@@ -7,12 +7,13 @@
 }
 
 .input-form__box {
-  display: grid;
-  grid-template-columns: auto;
-  grid-auto-columns: 24px;
-  grid-auto-flow: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   height: 44px;
-  padding: 12px 15px 8px;
+  padding: 8px 9px 8px 14px;
+
   background: #ffffff;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -33,9 +34,4 @@
 
 .input-form__box_focused {
   border-color: rgba(31, 32, 65, 0.5);
-}
-
-.input-form__box> :last-child {
-  margin-top: -2px;
-  justify-self: end;
 }
