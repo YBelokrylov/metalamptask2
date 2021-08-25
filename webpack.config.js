@@ -63,14 +63,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: "./UI-Page/UI-Page.html",
+      filename: './UI-Page/UI-Page.html',
       template: './UI-Page.pug',
       chunks: ['UI-Page']
     }),
     new CopyPlugin({
       patterns: [
-        { from: "images", to: "../dist/Ui-Page/images" },
+        { from: 'images', to: '../dist/Ui-Page/images' },
       ],
     }),
+
   ]
 }

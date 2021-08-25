@@ -17,7 +17,8 @@
     "webpack-cli": "^4.7.2"
   },
   "scripts": {
-    "dev": "webpack --mode development"
+    "dev": "webpack --mode development",
+    "watch": "webpack --watch --mode development"
   },
   "author": "Yaroslav Belokrylov",
   "license": "ISC"

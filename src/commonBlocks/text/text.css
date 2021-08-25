@@ -18,42 +18,34 @@
 
 .text_size_tiny {
   font-size: 10px;
-  line-height: 12px;
 }
 
 .text_size_small {
   font-size: 12px;
-  line-height: 15px;
 }
 
 .text_size_medium {
   font-size: 14px;
-  line-height: 18px;
 }
 
 .text_size_medium::-moz-placeholder {
   font-size: 14px;
-  line-height: 18px;
 }
 
 .text_size_medium::-webkit-input-placeholder {
   font-size: 14px;
-  line-height: 18px;
 }
 
 .text_size_18 {
   font-size: 18px;
-  line-height: 22px;
 }
 
 .text_size_large {
   font-size: 19px;
-  line-height: 23px;
 }
 
 .text_size_huge {
   font-size: 24px;
-  line-height: 29px;
 }
 
 /* _dark-shade */
