@@ -24,8 +24,12 @@
   width: 150px;
 }
 
-.input-form__box_size_m {
+.input-form__box_size_260 {
   width: 260px;
+}
+
+.input-form__box_size_m {
+  width: 266px;
 }
 
 .input-form__box_size_l {
