@@ -1,0 +1,9 @@
+.checkbox-group_rich-checkbox {
+  width: 266px;
+}
+
+.checkbox-group__value_rich-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}

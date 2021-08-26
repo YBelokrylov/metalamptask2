@@ -9,8 +9,8 @@ html(lang="en")
     include ../src/commonBlocks/dropdown/_type/dropdown_type_guests
     include ../src/commonBlocks/dropdown/_type/dropdown_type_room-comfort
     include ../src/commonBlocks/date-dropdown/date-dropdown
-    include ../src/commonBlocks/checkbox/checkbox
-    include ../src/commonBlocks/checkbox/_rich-checkbox/checkbox_rich-checkbox
+    include ../src/commonBlocks/checkbox-group/checkbox-group
+    include ../src/commonBlocks/checkbox-group/_rich-checkbox/checkbox-group_rich-checkbox
     include ../src/commonBlocks/room-features/room-features
     include ../src/commonBlocks/radio-button-group/radio-button-group
     include ../src/commonBlocks/toggle/toggle
@@ -46,7 +46,17 @@ html(lang="en")
 
     +dateDropdown
 
-    +checkboxGroup(checkboxGroup)
+    +checkbox-group(
+      {
+        groupTitle: "expandable checkbox list",
+        groupName: "HotelRules",
+        checkboxValues: [
+          "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", 
+          "Телевизор", "Шампунь"
+        ],
+        isExpandable: true
+      }
+    )
 
     +room-features(roomFeatures)
 
@@ -63,7 +73,16 @@ html(lang="en")
     +rate-button("room-254", 4, true)
     +rate-button("room-255", 5, false)
 
-    +rich-checkbox-group(richCheckboxGroup)
+    +rich-checkbox-group(
+      {
+        groupTitle: "Rich Checkbox Buttons",
+        groupName: "Benefits",
+        checkboxValues: {
+          "Широкий коридор": "Ширина коридоров в номере не менее 91 см.",
+          "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера."
+        },
+      }
+    )
 
     +comment(commentData)
 

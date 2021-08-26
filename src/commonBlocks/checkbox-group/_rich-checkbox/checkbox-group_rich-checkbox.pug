@@ -1,4 +1,4 @@
--
+//-
   let richCheckboxGroup = {
     groupTitle: "Rich Checkbox Buttons",
     groupName: "Benefits",
@@ -9,17 +9,17 @@
   };
 
 mixin rich-checkbox-group(richCheckboxGroup)
-  div(class="checkbox checkbox_rich-checkbox") 
-    .checkbox__header
-      span(class="checkbox__title checkbox__title_rich-checkbox text text_type_bold text_size_small text_dark-shade_100 text_uppercase")= richCheckboxGroup.groupTitle
+  div(class="checkbox-group checkbox-group_rich-checkbox") 
+    .checkbox-group__header
+      span(class="checkbox-group__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase")= richCheckboxGroup.groupTitle
 
-    .checkbox__list
+    .checkbox-group__list
       mixin checkbox__line(checkboxTitle, value, checkboxText, name)
-        label(class="checkbox__line")
-          input(type="checkbox" name=name value=value class="checkbox__input")
-          span(class="checkbox__border")
-            span(class="checkbox__mark")
-          div(class="checkbox__value checkbox__value_rich-checkbox")
+        label(class="checkbox-group__line")
+          input(type="checkbox" name=name value=value class="checkbox-group__input")
+          span(class="checkbox-group__border")
+            span(class="checkbox-group__mark")
+          div(class="checkbox-group__value checkbox-group__value_rich-checkbox")
             span(class="text text_type_bold text_size_medium text_dark-shade_75")= checkboxTitle
             span(class="text text_type_regular text_size_small text_dark-shade_50")= checkboxText
 
