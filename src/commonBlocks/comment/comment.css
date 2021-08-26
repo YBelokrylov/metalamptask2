@@ -1,7 +1,7 @@
 .comment {
   display: grid;
   grid-template-columns: 48px auto;
-  gap: 10px;
+  gap: 12px 10px;
 
   width: 711px;
 }
@@ -20,9 +20,8 @@
 .comment__head {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-
-  margin-top: 5px;
+  justify-content: center;
+  gap: 8px;
 }
 
 .comment__like {
@@ -31,4 +30,6 @@
 
 .comment__text {
   margin: 0;
+
+  line-height: 1.715em;
 }
