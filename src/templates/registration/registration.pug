@@ -27,12 +27,12 @@ include ../../commonBlocks/radius-button/_border-gradient/radius-button_border-g
     +text-form(textFormName)
     +text-form(textFormSurname)
 
-    -
-      let radioButtonGroupGender = {
+    +radio-button-group(
+      {
         groupName: "gender",
         values: ["Мужчина", "Женщина"]
-      };
-    +radioButtonGroup(radioButtonGroup)
+      }
+    )
 
   -
     let textFormBirthday = {
