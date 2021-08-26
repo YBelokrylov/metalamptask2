@@ -58,7 +58,20 @@ html(lang="en")
       }
     )
 
-    +room-features(roomFeatures)
+    +room-features(
+      [
+        {
+          materialIcon: "insert_emoticon",
+          title: "Комфорт",
+          text: "Шумопоглащающие стены"
+        },
+        {
+          materialIcon: "location_city",
+          title: "Удобство",
+          text: "Окно в каждой из спален"
+        }
+      ]
+    )
 
     h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") Radio Buttons
     +radioButtonGroup(radioButtonGroup)

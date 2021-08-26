@@ -1,27 +1,20 @@
--
+//-
   let roomFeatures = [
     {
       materialIcon: "insert_emoticon",
       title: "Комфорт",
       text: "Шумопоглащающие стены"
     },
-    {
-      materialIcon: "location_city",
-      title: "Удобств",
-      text: "Окно в каждой из спален"
-    },
   ];
-
+  
+mixin room-features__item(materialIcon, title, text)
+  .room-features__item
+    span(class="room-features__icon material-icons material-icons_size_l material-icons_gradient")= materialIcon
+    span(class="room-features_head text text_type_bold text_size_medium text_dark-shade_75")= title
+    span(class="room-features_description text text_type_regular text_size_medium text_dark-shade_75")=  text
 
 mixin room-features(roomFeatures)
   .room-features
-
-    mixin room-features__item(materialIcon, title, text)
-      .room-features__item
-        span(class="room-features__icon material-icons material-icons_size_l material-icons_gradient")= materialIcon
-        span(class="room-features_head text text_type_bold text_size_medium text_dark-shade_75")= title
-        span(class="room-features_description text text_type_regular text_size_medium text_dark-shade_75")=  text
-
     each roomFeature in roomFeatures
       +room-features__item(roomFeature.materialIcon, roomFeature.title, roomFeature.text)
 
