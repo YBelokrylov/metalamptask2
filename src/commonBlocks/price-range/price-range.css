@@ -1,39 +1,23 @@
 .price-range {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content;
   align-items: baseline;
+  gap: 17px;
 
   width: 266px;
-  margin-bottom: 50px;
 }
 
 .price-range__price-distance {
   margin-left: auto;
 }
 
-.price-range__container {
-  position: relative;
-  top: 20px;
-
-  width: 266px;
-  grid-column: 1/-1;
-}
-
-.price-range__slider {
-  position: relative;
-  z-index: 1;
-}
-
 .price-range__track {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  grid-column: 1/-1;
 
   height: 6px;
+  margin: 4px 0;
 
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -46,7 +30,7 @@
   z-index: 2;
   left: 25%;
   right: 25%;
-  top: 0;
+  top: -1px;
   bottom: 0;
 
   height: 6px;
@@ -60,12 +44,12 @@
   z-index: 3;
   left: -2px;
   right: 0;
-  top: 0;
+  top: -1px;
   bottom: 0;
-  margin: 0;
 
-  height: 6px;
   width: calc(100% + 4px);
+  height: 6px;
+  margin: 0;
 
   background: transparent;
   pointer-events: none;
@@ -76,6 +60,7 @@
   position: relative;
   pointer-events: all;
   z-index: 100;
+  appearance: none;
 
   width: 16px;
   height: 16px;
@@ -84,13 +69,13 @@
   border: 2px solid #FFFFFF;
   border-radius: 10px;
   cursor: pointer;
-  appearance: none;
 }
 
 .price-range__input::-moz-range-thumb {
   position: relative;
   pointer-events: all;
   z-index: 100;
+  appearance: none;
 
   width: 16px;
   height: 16px;
@@ -99,5 +84,4 @@
   border: 2px solid #FFFFFF;
   border-radius: 10px;
   cursor: pointer;
-  appearance: none;
 }
