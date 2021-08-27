@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(6, 40px);
   place-items: center;
-  gap: 10px 0;
+  gap: 12px 0;
 }
 
 .pagination__link {
