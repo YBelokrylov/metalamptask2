@@ -2,7 +2,7 @@
   width: 320px;
   height: 369px;
 
-  padding: 20px;
+  padding: 18px 20px 20px 20px;
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
@@ -16,7 +16,7 @@
   align-items: center;
 
   height: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .calendar__swipe {
