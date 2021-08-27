@@ -2,8 +2,8 @@ let textButtons = document.querySelectorAll('.text-button');
 
 function toggleClass(element) {
   return function () {
-    element.classList.toggle('text-bold_color_purple');
-    element.classList.toggle('text-bold_color_gray');
+    element.classList.toggle('text_color_purple');
+    element.classList.toggle('text_dark-shade_50');
   };
 };
 

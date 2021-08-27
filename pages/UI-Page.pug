@@ -6,6 +6,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
     include ../src/commonBlocks/text-form/text-form
+    include ../src/commonBlocks/text-button/text-button
     include ../src/commonBlocks/dropdown/_type/dropdown_type_guests
     include ../src/commonBlocks/dropdown/_type/dropdown_type_room-comfort
     include ../src/commonBlocks/date-dropdown/date-dropdown
@@ -125,9 +126,10 @@ html(lang="en")
     +price-range
 
     h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") buttons 
-    +radius-button_default("click")
-    +radius-button_border-gradient("click")
+    +radius-button_default("click me")
+    +radius-button_border-gradient("click me")
     +radius-button_link("click")
+    +text-button("click me")
 
     h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") pagination 
     +pagination

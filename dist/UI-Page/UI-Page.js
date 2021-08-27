@@ -952,7 +952,7 @@ eval("let priceRange = document.querySelector('.price-range');\r\nlet inputLeft 
   \******************************************************/
 /***/ (() => {
 
-eval("let textButtons = document.querySelectorAll('.text-button');\r\n\r\nfunction toggleClass(element) {\r\n  return function () {\r\n    element.classList.toggle('text-bold_color_purple');\r\n    element.classList.toggle('text-bold_color_gray');\r\n  };\r\n};\r\n\r\nfor (let button of textButtons) {\r\n  button.addEventListener('mousedown', toggleClass(button));\r\n  button.addEventListener('mouseup', toggleClass(button));\r\n}\n\n//# sourceURL=webpack:///../src/commonBlocks/text-button/text-button.js?");
+eval("let textButtons = document.querySelectorAll('.text-button');\r\n\r\nfunction toggleClass(element) {\r\n  return function () {\r\n    element.classList.toggle('text_color_purple');\r\n    element.classList.toggle('text_dark-shade_50');\r\n  };\r\n};\r\n\r\nfor (let button of textButtons) {\r\n  button.addEventListener('mousedown', toggleClass(button));\r\n  button.addEventListener('mouseup', toggleClass(button));\r\n}\n\n//# sourceURL=webpack:///../src/commonBlocks/text-button/text-button.js?");
 
 /***/ }),
 
