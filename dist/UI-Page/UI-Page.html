@@ -5,234 +5,239 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>h3 {margin-bottom: 16px;}</style>
   <script defer src=".././UI-Page/UI-Page.js"></script></head>
   <body>
-        <div class="input-form text-form">
-          <label>
-            <div class="input-form__title text text_dark-shade_100 text_size_small text_type_bold text_uppercase">Text Field</div>
-            <div class="input-form__box input-form__box_size_l">
-              <input class="text-form__input text text_dark-shade_25 text_size_medium text_type_regular" type="text" name="Email" placeholder="Email">
+    <div class="column">
+          <div class="input-form text-form">
+            <label>
+              <div class="input-form__title text text_dark-shade_100 text_size_small text_type_bold text_uppercase">Text Field</div>
+              <div class="input-form__box input-form__box_size_l">
+                <input class="text-form__input text text_dark-shade_25 text_size_medium text_type_regular" type="text" name="Email" placeholder="Email">
+              </div>
+            </label>
+          </div>
+              <div class="input-form dropdown dropdown_type_guests">
+                <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Гости</div>
+                <div class="input-form__box dropdown__head input-form__box_size_l">
+                  <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">Сколько гостей</div>
+                  <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                </div>
+                <div class="dropdown__list">
+                    <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">взрослые</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease" disabled>
+                         -</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">0</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+   </button>
+                    </div>
+                    <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">дети</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease" disabled>
+                         -</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">0</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+   </button>
+                    </div>
+                    <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">младенцы</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease" disabled>
+                         -</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">0</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+   </button>
+                    </div>
+                  <div class="dropdown__text-buttons">
+                        <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase dropdown__clear-form text-button_disabled" type="button">очистить</button>
+                        <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase dropdown__confirm-form" type="button">применить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="input-form dropdown dropdown_type_room-comfort">
+                <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Удобства номера</div>
+                <div class="input-form__box dropdown__head input-form__box_size_m">
+                  <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">2 спальни, 2 кровати...</div>
+                  <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                </div>
+                <div class="dropdown__list">
+                    <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">спальни</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease">-</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">2</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+</button>
+                    </div>
+                    <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">кровати</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease">-</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">2</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+</button>
+                    </div>
+                    <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">ванные комнаты</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease" disabled>-</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">0</span>
+                      <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+</button>
+                    </div>
+                </div>
+              </div>
+          <div class="date-dropdown">
+                <div class="input-form dropdown">
+                  <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">прибытие</div>
+                  <div class="input-form__box dropdown__head input-form__box_size_s">
+                    <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
+                    <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                  </div>
+                </div>
+                <div class="input-form dropdown">
+                  <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">выезд</div>
+                  <div class="input-form__box dropdown__head input-form__box_size_s">
+                    <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
+                    <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                  </div>
+                </div>
+          </div>
+          <div class="checkbox-group checkbox-group_expandable">
+            <div class="checkbox-group__header">
+              <div class="checkbox-group__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">expandable checkbox list</div>
+              <div class="checkbox-group__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</div>
             </div>
+            <div class="checkbox-group__list">
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Завтрак"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Завтрак</div>
+                      </label>
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Письменный стол"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Письменный стол</div>
+                      </label>
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Стул для кормления"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Стул для кормления</div>
+                      </label>
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Кроватка"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Кроватка</div>
+                      </label>
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Телевизор"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Телевизор</div>
+                      </label>
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Шампунь"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Шампунь</div>
+                      </label>
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Телевизор"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Телевизор</div>
+                      </label>
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Шампунь"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Шампунь</div>
+                      </label>
+            </div>
+          </div>
+          <div class="room-features">
+                <div class="room-features__item"><span class="room-features__icon material-icons material-icons_size_l material-icons_gradient">insert_emoticon</span><span class="room-features_head text text_type_bold text_size_medium text_dark-shade_75">Комфорт</span><span class="room-features_description text text_type_regular text_size_medium text_dark-shade_75">Шумопоглащающие стены</span></div>
+                <div class="room-features__item"><span class="room-features__icon material-icons material-icons_size_l material-icons_gradient">location_city</span><span class="room-features_head text text_type_bold text_size_medium text_dark-shade_75">Удобство</span><span class="room-features_description text text_type_regular text_size_medium text_dark-shade_75">Окно в каждой из спален</span></div>
+          </div>
+    </div>
+    <div class="column">
+      <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Radio Buttons</h3>
+          <div class="radio-button-group">
+                <label class="radio-button-group__label">
+                  <input class="radio-button-group__input" type="radio" name="gender" value="Мужчина"><span class="radio-button-group__border"><span class="radio-button-group__mark"></span></span><span class="radio-button-group__value text text_type_regular text_size_medium text_dark-shade_50">Мужчина</span>
+                </label>
+                <label class="radio-button-group__label">
+                  <input class="radio-button-group__input" type="radio" name="gender" value="Женщина"><span class="radio-button-group__border"><span class="radio-button-group__mark"></span></span><span class="radio-button-group__value text text_type_regular text_size_medium text_dark-shade_50">Женщина</span>
+                </label>
+          </div>
+      <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Toggle</h3>
+          <label class="toggle">
+            <input class="toggle__input" type="checkbox" name="specialOffers" checked><span class="toggle__border"><span class="toggle__mark"></span></span><span class="toggle__value text text_type_regular text_size_medium text_dark-shade_75">Получать спецпредложения</span>
           </label>
-        </div>
-            <div class="input-form dropdown dropdown_type_guests">
-              <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Гости</div>
-              <div class="input-form__box dropdown__head input-form__box_size_l">
-                <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">Сколько гостей</div>
-                <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
-              </div>
-              <div class="dropdown__list">
-                  <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">взрослые</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease" disabled>
-                       -</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">0</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+   </button>
-                  </div>
-                  <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">дети</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease" disabled>
-                       -</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">0</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+   </button>
-                  </div>
-                  <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">младенцы</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease" disabled>
-                       -</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">0</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+   </button>
-                  </div>
-                <div class="dropdown__text-buttons">
-                      <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase dropdown__clear-form text-button_disabled" type="button">очистить</button>
-                      <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase dropdown__confirm-form" type="button">применить</button>
-                </div>
-              </div>
-            </div>
-            <div class="input-form dropdown dropdown_type_room-comfort">
-              <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Удобства номера</div>
-              <div class="input-form__box dropdown__head input-form__box_size_m">
-                <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">2 спальни, 2 кровати...</div>
-                <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
-              </div>
-              <div class="dropdown__list">
-                  <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">спальни</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease">-</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">2</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+</button>
-                  </div>
-                  <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">кровати</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease">-</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">2</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+</button>
-                  </div>
-                  <div class="dropdown__line"><span class="dropdown__option text text_type_bold text_size_small text_dark-shade_100 text_uppercase">ванные комнаты</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-decrease" disabled>-</button><span class="dropdown__value text text_type_bold text_size_small text_dark-shade_100">0</span>
-                    <button class="dropdown__button text text_type_regular text_size_18 text_dark-shade_50" name="value-increase">+</button>
-                  </div>
-              </div>
-            </div>
-        <div class="date-dropdown">
-              <div class="input-form dropdown">
-                <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">прибытие</div>
-                <div class="input-form__box dropdown__head input-form__box_size_s">
-                  <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
-                  <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
-                </div>
-              </div>
-              <div class="input-form dropdown">
-                <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">выезд</div>
-                <div class="input-form__box dropdown__head input-form__box_size_s">
-                  <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
-                  <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
-                </div>
-              </div>
-        </div>
-        <div class="checkbox-group checkbox-group_expandable">
-          <div class="checkbox-group__header">
-            <div class="checkbox-group__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">expandable checkbox list</div>
-            <div class="checkbox-group__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</div>
+      <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">like button</h3>
+          <button class="like-button" type="button" data-is-pressed="false"> <span class="like-button__heart material-icons material-icons_size_s material-icons_dark-shade_25">favorite_border</span><span class="like-button__count text-regular text text_type_regular text_size_tiny text_dark-shade_25">10</span></button>
+      <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">rate button</h3>
+          <div class="rate-button">
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="5" id="room-254-id5" disabled>
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id5"></label>
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="4" id="room-254-id4" checked disabled>
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id4"></label>
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="3" id="room-254-id3" disabled>
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id3"></label>
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="2" id="room-254-id2" disabled>
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id2"></label>
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="1" id="room-254-id1" disabled>
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id1"></label>
           </div>
-          <div class="checkbox-group__list">
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Завтрак"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Завтрак</div>
-                    </label>
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Письменный стол"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Письменный стол</div>
-                    </label>
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Стул для кормления"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Стул для кормления</div>
-                    </label>
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Кроватка"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Кроватка</div>
-                    </label>
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Телевизор"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Телевизор</div>
-                    </label>
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Шампунь"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Шампунь</div>
-                    </label>
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Телевизор"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Телевизор</div>
-                    </label>
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="HotelRules" value="Шампунь"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value text text_type_regular text_size_medium material-icons_dark-shade_50">Шампунь</div>
-                    </label>
+          <div class="rate-button">
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="5" id="room-255-id5" checked>
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id5"></label>
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="4" id="room-255-id4">
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id4"></label>
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="3" id="room-255-id3">
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id3"></label>
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="2" id="room-255-id2">
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id2"></label>
+                  <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="1" id="room-255-id1">
+                  <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id1"></label>
           </div>
-        </div>
-        <div class="room-features">
-              <div class="room-features__item"><span class="room-features__icon material-icons material-icons_size_l material-icons_gradient">insert_emoticon</span><span class="room-features_head text text_type_bold text_size_medium text_dark-shade_75">Комфорт</span><span class="room-features_description text text_type_regular text_size_medium text_dark-shade_75">Шумопоглащающие стены</span></div>
-              <div class="room-features__item"><span class="room-features__icon material-icons material-icons_size_l material-icons_gradient">location_city</span><span class="room-features_head text text_type_bold text_size_medium text_dark-shade_75">Удобство</span><span class="room-features_description text text_type_regular text_size_medium text_dark-shade_75">Окно в каждой из спален</span></div>
-        </div>
-    <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Radio Buttons</h3>
-        <div class="radio-button-group">
-              <label class="radio-button-group__label">
-                <input class="radio-button-group__input" type="radio" name="gender" value="Мужчина"><span class="radio-button-group__border"><span class="radio-button-group__mark"></span></span><span class="radio-button-group__value text text_type_regular text_size_medium text_dark-shade_50">Мужчина</span>
-              </label>
-              <label class="radio-button-group__label">
-                <input class="radio-button-group__input" type="radio" name="gender" value="Женщина"><span class="radio-button-group__border"><span class="radio-button-group__mark"></span></span><span class="radio-button-group__value text text_type_regular text_size_medium text_dark-shade_50">Женщина</span>
-              </label>
-        </div>
-    <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Toggle</h3>
-        <label class="toggle">
-          <input class="toggle__input" type="checkbox" name="specialOffers" checked><span class="toggle__border"><span class="toggle__mark"></span></span><span class="toggle__value text text_type_regular text_size_medium text_dark-shade_75">Получать спецпредложения</span>
-        </label>
-    <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">like button</h3>
-        <button class="like-button" type="button" data-is-pressed="false"> <span class="like-button__heart material-icons material-icons_size_s material-icons_dark-shade_25">favorite_border</span><span class="like-button__count text-regular text text_type_regular text_size_tiny text_dark-shade_25">10</span></button>
-    <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">rate button</h3>
-        <div class="rate-button">
-                <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="5" id="room-254-id5" disabled>
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id5"></label>
-                <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="4" id="room-254-id4" checked disabled>
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id4"></label>
-                <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="3" id="room-254-id3" disabled>
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id3"></label>
-                <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="2" id="room-254-id2" disabled>
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id2"></label>
-                <input class="rate-button__radio" type="radio" name="rating-for-room-254" value="1" id="room-254-id1" disabled>
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-254-id1"></label>
-        </div>
-        <div class="rate-button">
-                <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="5" id="room-255-id5" checked>
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id5"></label>
-                <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="4" id="room-255-id4">
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id4"></label>
-                <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="3" id="room-255-id3">
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id3"></label>
-                <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="2" id="room-255-id2">
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id2"></label>
-                <input class="rate-button__radio" type="radio" name="rating-for-room-255" value="1" id="room-255-id1">
-                <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-255-id1"></label>
-        </div>
-        <div class="checkbox-group checkbox-group_rich-checkbox"> 
-          <div class="checkbox-group__header"><span class="checkbox-group__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Rich Checkbox Buttons</span></div>
-          <div class="checkbox-group__list">
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="Benefits" value="Широкий коридор"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value checkbox-group__value_rich-checkbox"><span class="text text_type_bold text_size_medium text_dark-shade_75">Широкий коридор</span><span class="text text_type_regular text_size_small text_dark-shade_50">Ширина коридоров в номере не менее 91 см.</span></div>
-                    </label>
-                    <label class="checkbox-group__line">
-                      <input class="checkbox-group__input" type="checkbox" name="Benefits" value="Помощник для инвалидов"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
-                      <div class="checkbox-group__value checkbox-group__value_rich-checkbox"><span class="text text_type_bold text_size_medium text_dark-shade_75">Помощник для инвалидов</span><span class="text text_type_regular text_size_small text_dark-shade_50">На 1 этаже вас встретит специалист и проводит до номера.</span></div>
-                    </label>
-          </div>
-        </div>
-        <div class="comment"><img class="comment__user-photo" src="./images/comment.jpg" alt="User Photo">
-          <div class="comment__head"><span class="comment__user-name text text_type_bold text_size_medium text_dark-shade_75">Мурад Сарафанов</span><span class="comment__date text text_type_regular text_size_medium text_dark-shade_50">5 дней назад</span></div>
-          <div class="comment__like">
-                <button class="like-button" type="button" data-is-pressed="false"> <span class="like-button__heart material-icons material-icons_size_s material-icons_dark-shade_25">favorite_border</span><span class="like-button__count text-regular text text_type_regular text_size_tiny text_dark-shade_25">10</span></button>
-          </div>
-          <p class="comment__text text text_type_regular text_size_medium text_dark-shade_50">Великолепный матрас на кровати в основной спальне!
-        А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
-        Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
-        </div>
-        <div class="bullet-list"><span class="bullet-list__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Bullet List</span>
-          <ul class="bullet-list__container">
-                <li class="bullet-list__item"><span class="bullet-list__marker"> </span><span class="bullet-list__text text text_type_regular text_size_medium text_dark-shade_75">Нельзя с питомцами</span></li>
-                <li class="bullet-list__item"><span class="bullet-list__marker"> </span><span class="bullet-list__text text text_type_regular text_size_medium text_dark-shade_75">Без вечеринок и мероприятий</span></li>
-                <li class="bullet-list__item"><span class="bullet-list__marker"> </span><span class="bullet-list__text text text_type_regular text_size_medium text_dark-shade_75">Время прибытия — после 13:00, а выезд до 12:00</span></li>
-          </ul>
-        </div>
-        <div class="price-range"><span class="price-range__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Range slider</span>
-          <div class="price-range__price-distance"><span class="price-range__left-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">5000₽ - </span><span class="price-range__right-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">10000₽</span></div>
-          <div class="price-range__track"> 
-            <input class="price-range__input price-range__input-left" type="range" name="" min="0" max="150" value="50">
-            <input class="price-range__input price-range__input-right" type="range" name="" min="0" max="150" value="100">
-            <div class="price-range__range"> </div>
-          </div>
-        </div>
-    <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">buttons </h3>
-        <button class="radius-button radius-button_default radius-button_size_small" type="button"><span class="radius-button__text text text_type_bold text_size_small text_color_white text_uppercase">click me</span></button>
-        <button class="radius-button radius-button_border-gradient radius-button_size_small" type="button"><span class="radius-button__text text text_size_small text_type_bold text_color_purple text_uppercase">click me</span></button>
-        <button class="radius-button radius-button_size_large radius-button_link" type="button"><span class="radius-button__text text text_type_bold text_size_small text_color_white text_uppercase">Перейти к оплате</span><span class="radius-button__arrow material-icons material-icons_color_white material-icons_size_m">arrow_forward</span></button>
-        <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">click me</button>
-    <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">pagination </h3>
-        <div class="pagination"><a class="pagination__link" href="#"> <span class="pagination__page pagination__current-page text text_type_bold text_size_small text_color_white">1</span></a><a class="pagination__link" href="#"><span class="pagination__page text text_type_regular text_size_small text_dark-shade_50">2</span></a><a class="pagination__link" href="#"><span class="pagination__page text text_type_regular text_size_small text_dark-shade_50">3</span></a><span class="text text_type_regular text_size_small text_dark-shade_50">...</span><a class="pagination__link" href="#"><span class="pagination__page text text_type_regular text_size_small text_dark-shade_50">15</span></a><a class="pagination__link" href="#"><span class="pagination__arrow material-icons material-icons_size_m material-icons_color_white">arrow_forward</span></a><span class="pagination__description text text_type_regular text_size_medium text_dark-shade_75">1 – 12 из 100+ вариантов аренды</span></div>
-        <div class="calendar">
-          <header class="calendar__header">
-            <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_back</button><span class="text text_type_bold text_size_large text_dark-shade_100">Август 2019</span>
-            <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_forward</button>
-          </header>
-          <div class="calendar__main">
-            <div class="calendar__days-line text text_type_bold text_size_small text_color_purple"><span class="calendar__week-day">Пн</span><span class="calendar__week-day">Вт</span><span class="calendar__week-day">Ср</span><span class="calendar__week-day">Чт</span><span class="calendar__week-day">Пт</span><span class="calendar__week-day">Сб</span><span class="calendar__week-day">Вс</span>
-            </div>
-            <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day text-regular_dark_s">29</span><span class="calendar__day text-regular_dark_s">30</span><span class="calendar__day text-regular_dark_s">31</span><span class="calendar__day">1</span><span class="calendar__day">2</span><span class="calendar__day">3</span><span class="calendar__day">4</span>
-            </div>
-            <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">5</span><span class="calendar__day">6</span><span class="calendar__day">7</span><span class="calendar__day calendar__today">8</span><span class="calendar__day">9</span><span class="calendar__day">10</span><span class="calendar__day">11</span>
-            </div>
-            <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">12</span><span class="calendar__day">13</span><span class="calendar__day">14</span><span class="calendar__day">15</span><span class="calendar__day">16</span><span class="calendar__day">17</span><span class="calendar__day">18</span>
-            </div>
-            <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day calendar__selected-edge-day calendar__selected-left-edge-day">19</span><span class="calendar__day calendar__selected-day">20</span><span class="calendar__day calendar__selected-day">21</span><span class="calendar__day calendar__selected-day">22</span><span class="calendar__day calendar__selected-edge-day calendar__selected-right-edge-day">23</span><span class="calendar__day">24</span><span class="calendar__day">25</span>
-            </div>
-            <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">26</span><span class="calendar__day">27</span><span class="calendar__day">28</span><span class="calendar__day">29</span><span class="calendar__day">30</span><span class="calendar__day">31</span><span class="calendar__day text-regular_dark_s">1</span>
-            </div>
-            <div class="calendar__footer">
-                  <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Очистить</button>
-                  <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Применить</button>
+          <div class="checkbox-group checkbox-group_rich-checkbox"> 
+            <div class="checkbox-group__header"><span class="checkbox-group__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Rich Checkbox Buttons</span></div>
+            <div class="checkbox-group__list">
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="Benefits" value="Широкий коридор"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value checkbox-group__value_rich-checkbox"><span class="text text_type_bold text_size_medium text_dark-shade_75">Широкий коридор</span><span class="text text_type_regular text_size_small text_dark-shade_50">Ширина коридоров в номере не менее 91 см.</span></div>
+                      </label>
+                      <label class="checkbox-group__line">
+                        <input class="checkbox-group__input" type="checkbox" name="Benefits" value="Помощник для инвалидов"><span class="checkbox-group__border"><span class="checkbox-group__mark"></span></span>
+                        <div class="checkbox-group__value checkbox-group__value_rich-checkbox"><span class="text text_type_bold text_size_medium text_dark-shade_75">Помощник для инвалидов</span><span class="text text_type_regular text_size_small text_dark-shade_50">На 1 этаже вас встретит специалист и проводит до номера.</span></div>
+                      </label>
             </div>
           </div>
-        </div>
+          <div class="comment"><img class="comment__user-photo" src="./images/comment.jpg" alt="User Photo">
+            <div class="comment__head"><span class="comment__user-name text text_type_bold text_size_medium text_dark-shade_75">Мурад Сарафанов</span><span class="comment__date text text_type_regular text_size_medium text_dark-shade_50">5 дней назад</span></div>
+            <div class="comment__like">
+                  <button class="like-button" type="button" data-is-pressed="false"> <span class="like-button__heart material-icons material-icons_size_s material-icons_dark-shade_25">favorite_border</span><span class="like-button__count text-regular text text_type_regular text_size_tiny text_dark-shade_25">10</span></button>
+            </div>
+            <p class="comment__text text text_type_regular text_size_medium text_dark-shade_50">Великолепный матрас на кровати в основной спальне!
+          А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+          Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+          </div>
+          <div class="bullet-list"><span class="bullet-list__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Bullet List</span>
+            <ul class="bullet-list__container">
+                  <li class="bullet-list__item"><span class="bullet-list__marker"> </span><span class="bullet-list__text text text_type_regular text_size_medium text_dark-shade_75">Нельзя с питомцами</span></li>
+                  <li class="bullet-list__item"><span class="bullet-list__marker"> </span><span class="bullet-list__text text text_type_regular text_size_medium text_dark-shade_75">Без вечеринок и мероприятий</span></li>
+                  <li class="bullet-list__item"><span class="bullet-list__marker"> </span><span class="bullet-list__text text text_type_regular text_size_medium text_dark-shade_75">Время прибытия — после 13:00, а выезд до 12:00</span></li>
+            </ul>
+          </div>
+    </div>
+    <div class="column">
+          <div class="price-range"><span class="price-range__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Range slider</span>
+            <div class="price-range__price-distance"><span class="price-range__left-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">5000₽ - </span><span class="price-range__right-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">10000₽</span></div>
+            <div class="price-range__track"> 
+              <input class="price-range__input price-range__input-left" type="range" name="" min="0" max="150" value="50">
+              <input class="price-range__input price-range__input-right" type="range" name="" min="0" max="150" value="100">
+              <div class="price-range__range"> </div>
+            </div>
+          </div>
+      <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">buttons </h3>
+          <button class="radius-button radius-button_default radius-button_size_small" type="button"><span class="radius-button__text text text_type_bold text_size_small text_color_white text_uppercase">click me</span></button>
+          <button class="radius-button radius-button_border-gradient radius-button_size_small" type="button"><span class="radius-button__text text text_size_small text_type_bold text_color_purple text_uppercase">click me</span></button>
+          <button class="radius-button radius-button_size_large radius-button_link" type="button"><span class="radius-button__text text text_type_bold text_size_small text_color_white text_uppercase">Перейти к оплате</span><span class="radius-button__arrow material-icons material-icons_color_white material-icons_size_m">arrow_forward</span></button>
+          <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">click me</button>
+      <h3 class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase">pagination </h3>
+          <div class="pagination"><a class="pagination__link" href="#"> <span class="pagination__page pagination__current-page text text_type_bold text_size_small text_color_white">1</span></a><a class="pagination__link" href="#"><span class="pagination__page text text_type_regular text_size_small text_dark-shade_50">2</span></a><a class="pagination__link" href="#"><span class="pagination__page text text_type_regular text_size_small text_dark-shade_50">3</span></a><span class="text text_type_regular text_size_small text_dark-shade_50">...</span><a class="pagination__link" href="#"><span class="pagination__page text text_type_regular text_size_small text_dark-shade_50">15</span></a><a class="pagination__link" href="#"><span class="pagination__arrow material-icons material-icons_size_m material-icons_color_white">arrow_forward</span></a><span class="pagination__description text text_type_regular text_size_medium text_dark-shade_75">1 – 12 из 100+ вариантов аренды</span></div>
+          <div class="calendar">
+            <header class="calendar__header">
+              <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_back</button><span class="text text_type_bold text_size_large text_dark-shade_100">Август 2019</span>
+              <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_forward</button>
+            </header>
+            <div class="calendar__main">
+              <div class="calendar__days-line text text_type_bold text_size_small text_color_purple"><span class="calendar__week-day">Пн</span><span class="calendar__week-day">Вт</span><span class="calendar__week-day">Ср</span><span class="calendar__week-day">Чт</span><span class="calendar__week-day">Пт</span><span class="calendar__week-day">Сб</span><span class="calendar__week-day">Вс</span>
+              </div>
+              <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day text-regular_dark_s">29</span><span class="calendar__day text-regular_dark_s">30</span><span class="calendar__day text-regular_dark_s">31</span><span class="calendar__day">1</span><span class="calendar__day">2</span><span class="calendar__day">3</span><span class="calendar__day">4</span>
+              </div>
+              <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">5</span><span class="calendar__day">6</span><span class="calendar__day">7</span><span class="calendar__day calendar__today">8</span><span class="calendar__day">9</span><span class="calendar__day">10</span><span class="calendar__day">11</span>
+              </div>
+              <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">12</span><span class="calendar__day">13</span><span class="calendar__day">14</span><span class="calendar__day">15</span><span class="calendar__day">16</span><span class="calendar__day">17</span><span class="calendar__day">18</span>
+              </div>
+              <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day calendar__selected-edge-day calendar__selected-left-edge-day">19</span><span class="calendar__day calendar__selected-day">20</span><span class="calendar__day calendar__selected-day">21</span><span class="calendar__day calendar__selected-day">22</span><span class="calendar__day calendar__selected-edge-day calendar__selected-right-edge-day">23</span><span class="calendar__day">24</span><span class="calendar__day">25</span>
+              </div>
+              <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">26</span><span class="calendar__day">27</span><span class="calendar__day">28</span><span class="calendar__day">29</span><span class="calendar__day">30</span><span class="calendar__day">31</span><span class="calendar__day text-regular_dark_s">1</span>
+              </div>
+              <div class="calendar__footer">
+                    <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Очистить</button>
+                    <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Применить</button>
+              </div>
+            </div>
+          </div>
+    </div>
     <div class="room-search">
       <h1 class="room-search__header text text_type_bold text_size_huge text_dark-shade_100">
          Найдём номера под ваши пожелания</h1>
@@ -458,57 +463,65 @@
         </div>
       </div>
     </div>
-    <header class="header"><img class="header__logo" src="./images/Logo.svg" alt="Logo">
-      <nav class="header__nav"><a class="header__link header__link_active text text_type_regular text_size_medium text_dark-shade_50">О нас</a>
-        <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Услуги</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Вакансии</a><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Новости</a>
-        <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Соглашения</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div>
-      </nav>
-          <button class="radius-button radius-button_border-gradient radius-button_size_tiny" type="button"><span class="radius-button__text text text_size_small text_type_bold text_color_purple text_uppercase">Войти</span></button>
-          <button class="radius-button radius-button_default radius-button_size_medium" type="button"><span class="radius-button__text text text_type_bold text_size_small text_color_white text_uppercase">Зарегистрироваться</span></button>
-    </header>
-    <header class="header header_sign-in"><img class="header__logo" src="./images/Logo.svg" alt="Logo">
-      <nav class="header__nav"><a class="header__link header__link_active text text_type_regular text_size_medium text_dark-shade_50">О нас</a>
-        <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Услуги</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Вакансии</a><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Новости</a>
-        <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Соглашения</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div>
-      </nav>
-      <div class="header__user-name"> <span class="text text_type_regular text_size_medium text_dark-shade_50">Юлий Цезарь</span></div>
-    </header>
-    <div class="footer">
-      <div class="footer__main"> 
-        <div class="footer__item"><img class="footer__logo" src="./images/Logo.svg" alt="Logo"><span class="footer__text text text_type_regular text_size_medium text_dark-shade_75">
-             Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</span></div>
-        <div class="footer__item">
-              <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Навигация</h3><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">О нас</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Новости</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Служба поддержки</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Услуги</a>
-        </div>
-        <div class="footer__item">
-              <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">О нас</h3><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">О сервисе</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Наша команда</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Вакансии</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Инвесторы</a>
-        </div>
-        <div class="footer__item">
-              <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Служба поддержки</h3><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Соглашения</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Сообщества</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Связь с нами</a>
-        </div>
-        <div class="footer__item">
-              <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Подписка</h3><span class="footer__text text text_type_regular text_size_medium text_dark-shade_75">
-             Получайте специальные предложения и новости сервиса</span>
-          <div class="footer__email">
-                <div class="input-form text-form">
-                  <label>
-                    <div class="input-form__box input-form__box_size_260">
-                      <input class="text-form__input text text_dark-shade_25 text_size_medium text_type_regular" type="email" name="Email" placeholder="Email">
-                      <button class="text-form__arrow material-icons material-icons_size_m material-icons_gradient" type="button">
-                         arrow_forward</button>
-                    </div>
-                  </label>
-                </div>
+    <div class="row">
+      <header class="header"><img class="header__logo" src="./images/Logo.svg" alt="Logo">
+        <nav class="header__nav"><a class="header__link header__link_active text text_type_regular text_size_medium text_dark-shade_50">О нас</a>
+          <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Услуги</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Вакансии</a><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Новости</a>
+          <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Соглашения</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div>
+        </nav>
+              <button class="radius-button radius-button_border-gradient radius-button_size_tiny" type="button"><span class="radius-button__text text text_size_small text_type_bold text_color_purple text_uppercase">Войти</span></button>
+              <button class="radius-button radius-button_default radius-button_size_medium" type="button"><span class="radius-button__text text text_type_bold text_size_small text_color_white text_uppercase">Зарегистрироваться</span></button>
+      </header>
+    </div>
+    <div class="row">
+      <header class="header header_sign-in"><img class="header__logo" src="./images/Logo.svg" alt="Logo">
+        <nav class="header__nav"><a class="header__link header__link_active text text_type_regular text_size_medium text_dark-shade_50">О нас</a>
+          <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Услуги</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Вакансии</a><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Новости</a>
+          <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Соглашения</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div>
+        </nav>
+        <div class="header__user-name"> <span class="text text_type_regular text_size_medium text_dark-shade_50">Юлий Цезарь</span></div>
+      </header>
+    </div>
+    <div class="row">
+      <div class="footer">
+        <div class="footer__main"> 
+          <div class="footer__item"><img class="footer__logo" src="./images/Logo.svg" alt="Logo"><span class="footer__text text text_type_regular text_size_medium text_dark-shade_75">
+               Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</span></div>
+          <div class="footer__item">
+                  <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Навигация</h3><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">О нас</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Новости</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Служба поддержки</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Услуги</a>
+          </div>
+          <div class="footer__item">
+                  <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">О нас</h3><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">О сервисе</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Наша команда</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Вакансии</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Инвесторы</a>
+          </div>
+          <div class="footer__item">
+                  <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Служба поддержки</h3><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Соглашения</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Сообщества</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Связь с нами</a>
+          </div>
+          <div class="footer__item">
+                  <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Подписка</h3><span class="footer__text text text_type_regular text_size_medium text_dark-shade_75">
+               Получайте специальные предложения и новости сервиса</span>
+            <div class="footer__email">
+                  <div class="input-form text-form">
+                    <label>
+                      <div class="input-form__box input-form__box_size_260">
+                        <input class="text-form__input text text_dark-shade_25 text_size_medium text_type_regular" type="email" name="Email" placeholder="Email">
+                        <button class="text-form__arrow material-icons material-icons_size_m material-icons_gradient" type="button">
+                           arrow_forward</button>
+                      </div>
+                    </label>
+                  </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="footer__copyright-bar"><span class="text_type_regular text_size_medium text_dark-shade_75">Copyright © 2018 Toxin отель. Все права защищены.</span>
-        <div class="footer__icons"><span class="font-awesome">&#61593;</span><span class="font-awesome">&#61570;</span><span class="font-awesome">&#61805;</span></div>
+        <div class="footer__copyright-bar"><span class="text_type_regular text_size_medium text_dark-shade_75">Copyright © 2018 Toxin отель. Все права защищены.</span>
+          <div class="footer__icons"><span class="font-awesome">&#61593;</span><span class="font-awesome">&#61570;</span><span class="font-awesome">&#61805;</span></div>
+        </div>
       </div>
     </div>
+    <div class="row">
 <div class="footer-creative"> <img class="footer__logo" src="./images/Logo.svg" alt="Logo"><span class="footer-creative__copyright text_type_regular text_size_medium text_dark-shade_75">
      Copyright © 2018 Toxin отель. Все права защищены.</span>
   <div class="footer-creative__icons"><span class="font-awesome">&#61593;</span><span class="font-awesome">&#61570;</span><span class="font-awesome">&#61805;</span></div>
 </div>
+    </div>
   </body>
 </html>

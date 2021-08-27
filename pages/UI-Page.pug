@@ -26,114 +26,114 @@ html(lang="en")
     include ../src/commonBlocks/pagination/pagination
     include ../src/commonBlocks/calendar/calendar
 
-    style
-      | h3 {margin-bottom: 16px;}
-
   body
-    +text-form(
-      {
-        type: "text",
-        name: "Email",
-        placeholder: "Email",
-        title: "Text Field",
-        isSubscription: false
-      }
-    )
-
-    +dropdownGuests
-
-    +dropdownRoomComfort
-
-    +dateDropdown
-
-    +checkbox-group(
-      {
-        groupTitle: "expandable checkbox list",
-        groupName: "HotelRules",
-        checkboxValues: [
-          "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", 
-          "Телевизор", "Шампунь"
-        ],
-        isExpandable: true
-      }
-    )
-
-    +room-features(
-      [
+    .column
+      +text-form(
         {
-          materialIcon: "insert_emoticon",
-          title: "Комфорт",
-          text: "Шумопоглащающие стены"
-        },
-        {
-          materialIcon: "location_city",
-          title: "Удобство",
-          text: "Окно в каждой из спален"
+          type: "text",
+          name: "Email",
+          placeholder: "Email",
+          title: "Text Field",
+          isSubscription: false
         }
-      ]
-    )
+      )
 
-    h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") Radio Buttons
-    +radio-button-group(
-      {
-        groupName: "gender",
-        values: ["Мужчина", "Женщина"]
-      }
-    )
+      +dropdownGuests
 
-    h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") Toggle
-    +toggle("specialOffers", "Получать спецпредложения", true)
+      +dropdownRoomComfort
 
-    h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") like button
-    +like-button
+      +dateDropdown
 
-    h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") rate button
-    +rate-button("room-254", 4, true)
-    +rate-button("room-255", 5, false)
+      +checkbox-group(
+        {
+          groupTitle: "expandable checkbox list",
+          groupName: "HotelRules",
+          checkboxValues: [
+            "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", 
+            "Телевизор", "Шампунь"
+          ],
+          isExpandable: true
+        }
+      )
 
-    +rich-checkbox-group(
-      {
-        groupTitle: "Rich Checkbox Buttons",
-        groupName: "Benefits",
-        checkboxValues: {
-          "Широкий коридор": "Ширина коридоров в номере не менее 91 см.",
-          "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера."
-        },
-      }
-    )
-
-    +comment(
-      {
-        userPhotoUrl: "./images/comment.jpg",
-        userName: "Мурад Сарафанов",
-        uploadTime: "5 дней назад",
-        commentText: `Великолепный матрас на кровати в основной спальне!
-        А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
-        Выкрикивал комплименты повару — никто не жаловался из соседей.`
-      }
-    )
-
-    +bullet-list(
-      {
-        title: "Bullet List",
-        items: [
-          "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"
+      +room-features(
+        [
+          {
+            materialIcon: "insert_emoticon",
+            title: "Комфорт",
+            text: "Шумопоглащающие стены"
+          },
+          {
+            materialIcon: "location_city",
+            title: "Удобство",
+            text: "Окно в каждой из спален"
+          }
         ]
-      }
-    )
+      )
 
-    +price-range
+    .column
+      h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") Radio Buttons
+      +radio-button-group(
+        {
+          groupName: "gender",
+          values: ["Мужчина", "Женщина"]
+        }
+      )
 
-    h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") buttons 
-    +radius-button_default("click me")
-    +radius-button_border-gradient("click me")
-    +radius-button_link("Перейти к оплате")
-    +text-button("click me")
+      h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") Toggle
+      +toggle("specialOffers", "Получать спецпредложения", true)
 
-    h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") pagination 
-    +pagination
+      h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") like button
+      +like-button
 
-    +calendar
+      h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") rate button
+      +rate-button("room-254", 4, true)
+      +rate-button("room-255", 5, false)
+
+      +rich-checkbox-group(
+        {
+          groupTitle: "Rich Checkbox Buttons",
+          groupName: "Benefits",
+          checkboxValues: {
+            "Широкий коридор": "Ширина коридоров в номере не менее 91 см.",
+            "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера."
+          },
+        }
+      )
+
+      +comment(
+        {
+          userPhotoUrl: "./images/comment.jpg",
+          userName: "Мурад Сарафанов",
+          uploadTime: "5 дней назад",
+          commentText: `Великолепный матрас на кровати в основной спальне!
+          А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+          Выкрикивал комплименты повару — никто не жаловался из соседей.`
+        }
+      )
+
+      +bullet-list(
+        {
+          title: "Bullet List",
+          items: [
+            "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"
+          ]
+        }
+      )
+
+    .column
+      +price-range
+
+      h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") buttons 
+      +radius-button_default("click me")
+      +radius-button_border-gradient("click me")
+      +radius-button_link("Перейти к оплате")
+      +text-button("click me")
+
+      h3(class="text text_type_bold text_size_small text_dark-shade_100 text_uppercase") pagination 
+      +pagination
+
+      +calendar
 
     include ../src/templates/room-search/room-search
 
@@ -145,10 +145,14 @@ html(lang="en")
 
     include ../src/templates/room-card/room-card
 
-    include ../src/commonBlocks/header/header
+    .row
+      include ../src/commonBlocks/header/header
 
-    include ../src/commonBlocks/header/_sign-in/header_sign-in
+    .row
+      include ../src/commonBlocks/header/_sign-in/header_sign-in
 
-    include ../src/commonBlocks/footer/footer
-
-    include ../src/commonBlocks/footer-creative/footer-creative
+    .row
+      include ../src/commonBlocks/footer/footer
+      
+    .row
+      include ../src/commonBlocks/footer-creative/footer-creative

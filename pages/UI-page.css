@@ -1,0 +1,14 @@
+body {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 10px;
+}
+
+.column {
+  display: grid;
+  gap: 5px;
+}
+
+.row {
+  grid-column: 1/-1;
+}

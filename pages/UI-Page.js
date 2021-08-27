@@ -1,1 +1,2 @@
-require('./UI-Page.pug')
+require('./UI-Page.pug');
+import './UI-page.css'
