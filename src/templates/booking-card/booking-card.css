@@ -31,7 +31,7 @@
 .booking-card__check {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .booking-card__check-line {
@@ -58,13 +58,17 @@
   font-weight: bold;
 }
 
+.booking-card__check-info_hidden {
+  visibility: hidden;
+}
+
 .booking-card__check-total {
   position: relative;
 
   display: flex;
   justify-content: space-between;
 
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 .booking-card__check-total::after {
