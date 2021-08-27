@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     'UI-Page': './UI-Page/UI-Page.js',
     'Landing-Page': './Landing-Page/Landing-Page.js',
+    'Search-room-page': './Search-room-page/Search-room-page.js',
   },
   output: {
     filename: './[name]/[name].js',
@@ -73,6 +74,11 @@ module.exports = {
       template: './Landing-Page/Landing-Page.pug',
       chunks: ['Landing-Page']
     }),
+    new HtmlWebpackPlugin({
+      filename: './Search-room-page/Search-room-page.html',
+      template: './Search-room-page/Search-room-page.pug',
+      chunks: ['Search-room-page']
+    }),
     new CopyPlugin({
       patterns: [
         { from: 'UI-Page/images', to: '../dist/Ui-Page/images' },
@@ -81,6 +87,11 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'Landing-Page/images', to: '../dist/Landing-Page/images' },
+      ],
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'Search-room-page/images', to: '../dist/Search-room-page/images' },
       ],
     }),
 

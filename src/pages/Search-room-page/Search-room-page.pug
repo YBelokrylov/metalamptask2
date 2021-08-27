@@ -1,0 +1,79 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Searching Page
+    include ../../commonBlocks/dropdown/dropdown
+    include ../../commonBlocks/dropdown/_type/dropdown_type_guests
+    include ../../commonBlocks/price-range/price-range
+    include ../../commonBlocks/checkbox-group/checkbox-group
+    include ../../commonBlocks/checkbox-group/_rich-checkbox/checkbox-group_rich-checkbox
+    include ../../commonBlocks/dropdown/_type/dropdown_type_room-comfort
+    include ../../templates/room-card/room-card
+
+  body 
+    include ../../commonBlocks/header/header
+
+    main
+      form.Search-room-page__filter
+        +dropdown("даты пребывания в отеле", "19 авг - 23 авг", "input-form__box_size_m")
+
+        +dropdownGuests("input-form__box_size_m")
+
+        +price-range
+        span(class="text text_type_regular text_size_small text_dark-shade_50")
+          | Стоимость за сутки пребывания в номере
+
+        +checkbox-group(
+          {
+            groupTitle: "правила дома",
+            groupName: "HotelRules",
+            checkboxValues: [
+              "Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"
+            ],
+            isExpandable: false
+          }
+        )
+
+        +rich-checkbox-group(
+          {
+            groupTitle: "доступность",
+            groupName: "accessibility",
+            checkboxValues: {
+              "Широкий коридор": "Ширина коридоров в номере не менее 91 см.",
+              "Помощник для инвалидов": "На 1 этаже вас встретит специалист и проводит до номера."
+            },
+          }
+        )
+
+        +dropdownRoomComfort
+
+        +checkbox-group(
+          {
+            groupTitle: "дополнительные удобства",
+            groupName: "additionallyFacilities",
+            checkboxValues: [
+              "Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь",
+              "Телевизор", "Шампунь"
+            ],
+            isExpandable: true
+          }
+        )
+
+      .Search-room-page__found-rooms
+        h2(class="Search-room-page__search-header text text_type_bold text_size_huge text_dark-shade_100")
+          |Номера, которые мы для вас подобрали
+        .Search-room-page__rooms-grid 
+          +room-card("888", "9 990", 5, "145", true)   
+          +room-card("840", "9 900", 4, "65", false)   
+          +room-card("980", "8 500", 3, "35", true)  
+
+          +room-card("856", "7 300", 5, "19", false)   
+          +room-card("740", "6 000", 4, "44", false)   
+          +room-card("982", "5 800", 3, "56", false)   
+
+
+    footer
+      include ../../commonBlocks/footer/footer

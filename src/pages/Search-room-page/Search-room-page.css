@@ -1,0 +1,24 @@
+main {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px 140px 40px;
+  gap: 60px;
+
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.Search-room-page__filter {
+  display: grid;
+  gap: 20px;
+}
+
+.Search-room-page__search-header {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.Search-room-page__rooms-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 12px;
+}

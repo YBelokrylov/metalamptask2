@@ -1,8 +1,8 @@
 include ../../text-button/text-button
 include ../dropdown
 
-mixin dropdownGuests
-  +dropdown("Гости", "Сколько гостей", "input-form__box_size_l", "dropdown_type_guests")
+mixin dropdownGuests(size)
+  +dropdown("Гости", "Сколько гостей", (size ? size:"input-form__box_size_l"), "dropdown_type_guests")
 
     div(class="dropdown__list")
       mixin dropdown__line(option)

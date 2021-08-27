@@ -25,6 +25,7 @@ html(lang="en")
     include ../../commonBlocks/radius-button/_link/radius-button_link
     include ../../commonBlocks/pagination/pagination
     include ../../commonBlocks/calendar/calendar
+    include ../../templates/room-card/room-card
 
   body
     .column
@@ -148,7 +149,7 @@ html(lang="en")
 
     include ../../templates/sign-in/sign-in
 
-    include ../../templates/room-card/room-card
+    +room-card("888", "9 990", 4, "145", true)   
 
     .row
       include ../../commonBlocks/header/header

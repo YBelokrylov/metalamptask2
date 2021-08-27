@@ -226,7 +226,7 @@
           </div>
     </div>
     <div class="column">
-          <div class="price-range"><span class="price-range__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Range slider</span>
+          <div class="price-range"><span class="price-range__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">диапазон цены</span>
             <div class="price-range__price-distance"><span class="price-range__left-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">5000₽ - </span><span class="price-range__right-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">10000₽</span></div>
             <div class="price-range__track"> 
               <input class="price-range__input price-range__input-left" type="range" name="" min="0" max="150" value="50">
@@ -518,35 +518,34 @@
             <button class="radius-button radius-button_border-gradient radius-button_size_small" type="button"><span class="radius-button__text text text_size_small text_type_bold text_color_purple text_uppercase">Создать</span></button>
       </div>
     </div>
-    <div class="room-card">
-      <div class="room-card__gallery"><span class="material-icons material-icons_color_white material-icons_size_m room-card__chevron">chevron_left</span><span class="material-icons material-icons_color_white material-icons_size_m room-card__chevron">chevron_right</span>
-        <div class="room-card__slider">
-          <div class="room-card__slider-circle room-card__slider-circle_active"></div>
-          <div class="room-card__slider-circle"></div>
-          <div class="room-card__slider-circle"></div>
-          <div class="room-card__slider-circle"></div>
+        <div class="room-card">
+          <div class="room-card__gallery"><span class="material-icons material-icons_color_white material-icons_size_m room-card__chevron">chevron_left</span><span class="material-icons material-icons_color_white material-icons_size_m room-card__chevron">chevron_right</span>
+            <div class="room-card__slider">
+              <div class="room-card__slider-circle room-card__slider-circle_active"></div>
+              <div class="room-card__slider-circle"></div>
+              <div class="room-card__slider-circle"></div>
+              <div class="room-card__slider-circle"></div>
+            </div>
+          </div>
+          <div class="room-card__info">
+            <div class="room-card__line"><span class="room-card__number text text_type_bold text_size_large text_dark-shade_100"> <span class="text_size_medium">№ </span>888</span><span class="room-card__lux text text_type_bold text_size_small text_color_purple text_uppercase">люкс</span><span class="room-card__price-per-day text text_type_bold text_size_medium text_dark-shade_50"> 9 990₽ <span class="text_type_regular text_size_small">в сутки</span></span>
+            </div>
+            <div class="room-card__line room-card__rating">
+                  <div class="rate-button">
+                          <input class="rate-button__radio" type="radio" name="rating-for-888" value="5" id="888-id5" disabled>
+                          <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="888-id5"></label>
+                          <input class="rate-button__radio" type="radio" name="rating-for-888" value="4" id="888-id4" checked disabled>
+                          <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="888-id4"></label>
+                          <input class="rate-button__radio" type="radio" name="rating-for-888" value="3" id="888-id3" disabled>
+                          <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="888-id3"></label>
+                          <input class="rate-button__radio" type="radio" name="rating-for-888" value="2" id="888-id2" disabled>
+                          <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="888-id2"></label>
+                          <input class="rate-button__radio" type="radio" name="rating-for-888" value="1" id="888-id1" disabled>
+                          <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="888-id1"></label>
+                  </div><span class="room-card__price-per-day text text_type_bold text_size_medium text_dark-shade_50"> 145 <span class="text_type_regular text_size_small">Отзывов</span></span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="room-card__info">
-        <div class="room-card__line"><span class="booking-card__number text text_type_bold text_size_large text_dark-shade_100"> <span class="text_size_medium">№ </span>888</span><span class="booking-card__lux text text_type_bold text_size_small text_color_purple text_uppercase">люкс</span><span class="booking-card__price-per-day text text_type_bold text_size_medium text_dark-shade_50">
-             9 990₽ <span class="text_type_regular text_size_small">в сутки</span></span></div>
-        <div class="room-card__line room-card__rating">
-              <div class="rate-button">
-                      <input class="rate-button__radio" type="radio" name="rating-for-room-888" value="5" id="room-888-id5" disabled>
-                      <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-888-id5"></label>
-                      <input class="rate-button__radio" type="radio" name="rating-for-room-888" value="4" id="room-888-id4" checked disabled>
-                      <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-888-id4"></label>
-                      <input class="rate-button__radio" type="radio" name="rating-for-room-888" value="3" id="room-888-id3" disabled>
-                      <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-888-id3"></label>
-                      <input class="rate-button__radio" type="radio" name="rating-for-room-888" value="2" id="room-888-id2" disabled>
-                      <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-888-id2"></label>
-                      <input class="rate-button__radio" type="radio" name="rating-for-room-888" value="1" id="room-888-id1" disabled>
-                      <label class="rate-button__star material-icons material-icons_size_m material-icons_gradient" for="room-888-id1"></label>
-              </div><span class="booking-card__price-per-day text text_type_bold text_size_medium text_dark-shade_50">
-             65 <span class="text_type_regular text_size_small">Отзывов</span></span>
-        </div>
-      </div>
-    </div>
     <div class="row">
       <header class="header"><img class="header__logo" src="./images/Logo.svg" alt="Logo">
         <nav class="header__nav"><a class="header__link header__link_active text text_type_regular text_size_medium text_dark-shade_50">О нас</a>
