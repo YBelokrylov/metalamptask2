@@ -9,60 +9,71 @@ include ../../commonBlocks/radius-button/_border-gradient/radius-button_border-g
     | Регистрация аккаунта
 
   .registration__block
-    -
-      let textFormName = {
+
+    +text-form(
+      {
         type: "text",
         name: "Name",
         placeholder: "Имя",
         title: "",
         isSubscription: false
       }
-      let textFormSurname = {
+    )
+
+    +text-form(
+      {
         type: "text",
         name: "Surname",
         placeholder: "Фамилия",
         title: "",
         isSubscription: false
       }
-    +text-form(textFormName)
-    +text-form(textFormSurname)
+    )
 
-    +radio-button-group(
+    .registration__radio-button-group
+      +radio-button-group(
+        {
+          groupName: "gender",
+          values: ["Мужчина", "Женщина"]
+        }
+      )
+
+  .registration__block
+
+    +text-form(
       {
-        groupName: "gender",
-        values: ["Мужчина", "Женщина"]
+        type: "text",
+        name: "Birthday",
+        placeholder: "ДД.ММ.ГГГГ",
+        title: "дата рождения",
+        isSubscription: false
       }
     )
 
-  -
-    let textFormBirthday = {
-      type: "text",
-      name: "Birthday",
-      placeholder: "ДД.ММ.ГГГГ",
-      title: "дата рождения",
-      isSubscription: false
-    }
-  +text-form(textFormBirthday)
-
   .registration__block
-    -
-      let textFormEmail = {
+
+    +text-form(
+      {
         type: "email",
         name: "Email",
         placeholder: "Email",
         title: "данные для входа в сервис",
         isSubscription: false
       }
-      let textFormPassword = {
+    )
+
+    +text-form(
+      {
         type: "text",
         name: "Password",
         placeholder: "Пароль",
         title: "",
         isSubscription: false
       }
-    +text-form(textFormEmail)
-    +text-form(textFormPassword)
-    +toggle("get-special-offers", "Получать спецпредложения", true)
+    )
+
+    .registration__toggle
+      +toggle("get-special-offers", "Получать спецпредложения", true)
 
   +radius-button_link("перейти к оплате")
 

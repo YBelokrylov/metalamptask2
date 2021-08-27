@@ -25,6 +25,14 @@
   gap: 10px;
 }
 
+.registration__radio-button-group {
+  padding-bottom: 5px;
+}
+
+.registration__toggle {
+  padding-bottom: 5px;
+}
+
 .registration__footer {
   display: flex;
   justify-content: space-between;
