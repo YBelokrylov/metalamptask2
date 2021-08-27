@@ -7,32 +7,37 @@
   grid-template-columns: 260px repeat(3, 160px) 260px;
   gap: 40px;
 
-  height: 372px;
 
-  padding: 100px 140px;
+  padding: 100px 140px 95px 140px;
   box-sizing: border-box;
 
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 }
 
 .footer__item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
+  display: grid;
+  gap: 15px;
+  align-content: flex-start;
 }
 
-.footer__logo {
-  object-fit: none;
+.footer__text {
+  line-height: 24px;
 }
 
 .footer__title {
   margin: 0;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .footer__link {
   text-decoration: none;
+  line-height: 24px;
+}
+
+.footer__email {
+  margin-top: 10px;
 }
 
 .footer__copyright-bar {

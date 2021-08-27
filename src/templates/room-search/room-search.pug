@@ -1,16 +1,14 @@
 include ../../commonBlocks/radius-button/_link/radius-button_link
 include ../../commonBlocks/dropdown/_type/dropdown_type_guests
-//include ../../commonBlocks/date-dropdown/date-dropdown
 
-mixin room-search
-  .room-search
-      h1(class="room-search__header text text_type_bold text_size_huge text_dark-shade_100") 
-        | Найдём номера под ваши пожелания
+.room-search
+  h1(class="room-search__header text text_type_bold text_size_huge text_dark-shade_100") 
+    | Найдём номера под ваши пожелания
 
-      +dateDropdown(dateDropdowns)
+  +dateDropdown(dateDropdowns)
 
-      .room-search__dropdown-guests
-        +dropdownGuests
+  .room-search__dropdown-guests
+    +dropdownGuests
 
-      .room-search__link-button
-        +radius-button_link("подобрать номер")
+  .room-search__link-button
+    +radius-button_link("подобрать номер")

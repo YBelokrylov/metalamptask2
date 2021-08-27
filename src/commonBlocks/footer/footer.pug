@@ -10,7 +10,7 @@ mixin footer__title(text)
   .footer__main 
     .footer__item
       img(class="footer__logo" src="./images/Logo.svg" alt="Logo")
-      span(class="footer__grade text text_type_regular text_size_medium text_dark-shade_75") 
+      span(class="footer__text text text_type_regular text_size_medium text_dark-shade_75") 
         |Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
 
     .footer__item
@@ -35,17 +35,20 @@ mixin footer__title(text)
 
     .footer__item
       +footer__title("Подписка")
-      span(class="text text_type_regular text_size_medium text_dark-shade_75") 
+      span(class="footer__text text text_type_regular text_size_medium text_dark-shade_75") 
         |Получайте специальные предложения и новости сервиса
-      -
-        let subscriptionEmail = {
-          type: "email",
-          name: "Email",
-          placeholder: "Email",
-          title: "",
-          isSubscription: true
-        }
-      +text-form(subscriptionEmail, "input-form__box_size_260")
+
+      .footer__email
+        +text-form(
+          {
+            type: "email",
+            name: "Email",
+            placeholder: "Email",
+            title: "",
+            isSubscription: true
+          }, 
+          "input-form__box_size_260"
+        )
 
   .footer__copyright-bar
     span(class="text_type_regular text_size_medium text_dark-shade_75") Copyright © 2018 Toxin отель. Все права защищены.
