@@ -8,6 +8,7 @@ module.exports = {
     'UI-Page': './UI-Page/UI-Page.js',
     'Landing-Page': './Landing-Page/Landing-Page.js',
     'Search-room-page': './Search-room-page/Search-room-page.js',
+    'Room-details-page': './Room-details-page/Room-details-page.js',
   },
   output: {
     filename: './[name]/[name].js',
@@ -79,6 +80,11 @@ module.exports = {
       template: './Search-room-page/Search-room-page.pug',
       chunks: ['Search-room-page']
     }),
+    new HtmlWebpackPlugin({
+      filename: './Room-details-page/Room-details-page.html',
+      template: './Room-details-page/Room-details-page.pug',
+      chunks: ['Room-details-page']
+    }),
     new CopyPlugin({
       patterns: [
         { from: 'UI-Page/images', to: '../dist/Ui-Page/images' },
@@ -94,6 +100,10 @@ module.exports = {
         { from: 'Search-room-page/images', to: '../dist/Search-room-page/images' },
       ],
     }),
-
+    new CopyPlugin({
+      patterns: [
+        { from: 'Room-details-page/images', to: '../dist/Room-details-page/images' },
+      ],
+    }),
   ]
 }
