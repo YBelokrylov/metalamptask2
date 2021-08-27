@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  context: path.resolve(__dirname, 'pages'),
+  context: path.resolve(__dirname, 'src/pages'),
   entry: {
-    'UI-Page': './UI-Page.js',
+    'UI-Page': './UI-Page/UI-Page.js',
   },
   output: {
     filename: './[name]/[name].js',
@@ -64,12 +64,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: './UI-Page/UI-Page.html',
-      template: './UI-Page.pug',
+      template: './UI-Page/UI-Page.pug',
       chunks: ['UI-Page']
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'images', to: '../dist/Ui-Page/images' },
+        { from: 'UI-Page/images', to: '../dist/Ui-Page/images' },
       ],
     }),
 
