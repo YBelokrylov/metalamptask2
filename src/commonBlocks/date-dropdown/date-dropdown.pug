@@ -1,10 +1,15 @@
 include ../dropdown/dropdown
-
--
+include ../calendar/calendar
+//-
   let dateDropdowns = [{title: "прибытие", date: "ДД.ММ.ГГГГ"}, {title: "выезд", date: "ДД.ММ.ГГГГ"}];
 
-mixin dateDropdown
+mixin date-dropdown(dateDropdowns)
   .date-dropdown
-    each dateDropdown in dateDropdowns
-      +dropdown(dateDropdown.title, dateDropdown.date, "input-form__box_size_s")
+    .date-dropdown__date-interval
+      each dateDropdown in dateDropdowns
+        +dropdown(dateDropdown.title, dateDropdown.date, "input-form__box_size_s")
+    .date-dropdown__calendar  
+      +calendar
+
+    
 

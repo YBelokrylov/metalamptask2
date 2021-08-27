@@ -12,7 +12,12 @@
       |9 990₽ 
       span(class="text_type_regular text_size_small") в сутки
 
-  +dateDropdown
+  +date-dropdown(
+    [
+      {title: "прибытие", date: "ДД.ММ.ГГГГ"}, 
+      {title: "выезд", date: "ДД.ММ.ГГГГ"}
+    ]
+  )
 
   +dropdownGuests
 

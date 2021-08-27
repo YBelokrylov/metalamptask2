@@ -66,20 +66,48 @@
                 </div>
               </div>
           <div class="date-dropdown">
-                <div class="input-form dropdown">
-                  <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">прибытие</div>
-                  <div class="input-form__box dropdown__head input-form__box_size_s">
-                    <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
-                    <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+            <div class="date-dropdown__date-interval">
+                  <div class="input-form dropdown">
+                    <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">прибытие</div>
+                    <div class="input-form__box dropdown__head input-form__box_size_s">
+                      <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
+                      <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                    </div>
                   </div>
-                </div>
-                <div class="input-form dropdown">
-                  <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">выезд</div>
-                  <div class="input-form__box dropdown__head input-form__box_size_s">
-                    <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
-                    <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                  <div class="input-form dropdown">
+                    <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">выезд</div>
+                    <div class="input-form__box dropdown__head input-form__box_size_s">
+                      <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
+                      <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                    </div>
                   </div>
-                </div>
+            </div>
+            <div class="date-dropdown__calendar"> 
+                  <div class="calendar">
+                    <header class="calendar__header">
+                      <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_back</button><span class="text text_type_bold text_size_large text_dark-shade_100">Август 2019</span>
+                      <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_forward</button>
+                    </header>
+                    <div class="calendar__main">
+                      <div class="calendar__days-line text text_type_bold text_size_small text_color_purple"><span class="calendar__week-day">Пн</span><span class="calendar__week-day">Вт</span><span class="calendar__week-day">Ср</span><span class="calendar__week-day">Чт</span><span class="calendar__week-day">Пт</span><span class="calendar__week-day">Сб</span><span class="calendar__week-day">Вс</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day text-regular_dark_s">29</span><span class="calendar__day text-regular_dark_s">30</span><span class="calendar__day text-regular_dark_s">31</span><span class="calendar__day">1</span><span class="calendar__day">2</span><span class="calendar__day">3</span><span class="calendar__day">4</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">5</span><span class="calendar__day">6</span><span class="calendar__day">7</span><span class="calendar__day calendar__today">8</span><span class="calendar__day">9</span><span class="calendar__day">10</span><span class="calendar__day">11</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">12</span><span class="calendar__day">13</span><span class="calendar__day">14</span><span class="calendar__day">15</span><span class="calendar__day">16</span><span class="calendar__day">17</span><span class="calendar__day">18</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day calendar__selected-edge-day calendar__selected-left-edge-day">19</span><span class="calendar__day calendar__selected-day">20</span><span class="calendar__day calendar__selected-day">21</span><span class="calendar__day calendar__selected-day">22</span><span class="calendar__day calendar__selected-edge-day calendar__selected-right-edge-day">23</span><span class="calendar__day">24</span><span class="calendar__day">25</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">26</span><span class="calendar__day">27</span><span class="calendar__day">28</span><span class="calendar__day">29</span><span class="calendar__day">30</span><span class="calendar__day">31</span><span class="calendar__day text-regular_dark_s">1</span>
+                      </div>
+                      <div class="calendar__footer">
+                            <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Очистить</button>
+                            <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Применить</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
           </div>
           <div class="checkbox-group checkbox-group_expandable">
             <div class="checkbox-group__header">
@@ -242,20 +270,48 @@
       <h1 class="room-search__header text text_type_bold text_size_huge text_dark-shade_100">
          Найдём номера под ваши пожелания</h1>
           <div class="date-dropdown">
-                <div class="input-form dropdown">
-                  <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">прибытие</div>
-                  <div class="input-form__box dropdown__head input-form__box_size_s">
-                    <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
-                    <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+            <div class="date-dropdown__date-interval">
+                  <div class="input-form dropdown">
+                    <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">прибытие</div>
+                    <div class="input-form__box dropdown__head input-form__box_size_s">
+                      <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
+                      <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                    </div>
                   </div>
-                </div>
-                <div class="input-form dropdown">
-                  <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">выезд</div>
-                  <div class="input-form__box dropdown__head input-form__box_size_s">
-                    <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
-                    <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                  <div class="input-form dropdown">
+                    <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">выезд</div>
+                    <div class="input-form__box dropdown__head input-form__box_size_s">
+                      <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
+                      <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                    </div>
                   </div>
-                </div>
+            </div>
+            <div class="date-dropdown__calendar"> 
+                  <div class="calendar">
+                    <header class="calendar__header">
+                      <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_back</button><span class="text text_type_bold text_size_large text_dark-shade_100">Август 2019</span>
+                      <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_forward</button>
+                    </header>
+                    <div class="calendar__main">
+                      <div class="calendar__days-line text text_type_bold text_size_small text_color_purple"><span class="calendar__week-day">Пн</span><span class="calendar__week-day">Вт</span><span class="calendar__week-day">Ср</span><span class="calendar__week-day">Чт</span><span class="calendar__week-day">Пт</span><span class="calendar__week-day">Сб</span><span class="calendar__week-day">Вс</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day text-regular_dark_s">29</span><span class="calendar__day text-regular_dark_s">30</span><span class="calendar__day text-regular_dark_s">31</span><span class="calendar__day">1</span><span class="calendar__day">2</span><span class="calendar__day">3</span><span class="calendar__day">4</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">5</span><span class="calendar__day">6</span><span class="calendar__day">7</span><span class="calendar__day calendar__today">8</span><span class="calendar__day">9</span><span class="calendar__day">10</span><span class="calendar__day">11</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">12</span><span class="calendar__day">13</span><span class="calendar__day">14</span><span class="calendar__day">15</span><span class="calendar__day">16</span><span class="calendar__day">17</span><span class="calendar__day">18</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day calendar__selected-edge-day calendar__selected-left-edge-day">19</span><span class="calendar__day calendar__selected-day">20</span><span class="calendar__day calendar__selected-day">21</span><span class="calendar__day calendar__selected-day">22</span><span class="calendar__day calendar__selected-edge-day calendar__selected-right-edge-day">23</span><span class="calendar__day">24</span><span class="calendar__day">25</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">26</span><span class="calendar__day">27</span><span class="calendar__day">28</span><span class="calendar__day">29</span><span class="calendar__day">30</span><span class="calendar__day">31</span><span class="calendar__day text-regular_dark_s">1</span>
+                      </div>
+                      <div class="calendar__footer">
+                            <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Очистить</button>
+                            <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Применить</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
           </div>
       <div class="room-search__dropdown-guests">
                 <div class="input-form dropdown dropdown_type_guests">
@@ -360,20 +416,48 @@
       <div class="booking-card__header"><span class="booking-card__number text text_type_bold text_size_huge text_dark-shade_100"> <span class="text_size_medium">№ </span>888</span><span class="booking-card__lux text text_type_bold text_size_small text_color_purple text_uppercase">люкс</span><span class="booking-card__price-per-day text text_type_bold text_size_medium text_dark-shade_50">
            9 990₽ <span class="text_type_regular text_size_small">в сутки</span></span></div>
           <div class="date-dropdown">
-                <div class="input-form dropdown">
-                  <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">прибытие</div>
-                  <div class="input-form__box dropdown__head input-form__box_size_s">
-                    <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
-                    <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+            <div class="date-dropdown__date-interval">
+                  <div class="input-form dropdown">
+                    <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">прибытие</div>
+                    <div class="input-form__box dropdown__head input-form__box_size_s">
+                      <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
+                      <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                    </div>
                   </div>
-                </div>
-                <div class="input-form dropdown">
-                  <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">выезд</div>
-                  <div class="input-form__box dropdown__head input-form__box_size_s">
-                    <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
-                    <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                  <div class="input-form dropdown">
+                    <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">выезд</div>
+                    <div class="input-form__box dropdown__head input-form__box_size_s">
+                      <div class="dropdown__input text text_type_regular text_size_medium text_dark-shade_75">ДД.ММ.ГГГГ</div>
+                      <div class="dropdown__expand-more material-icons material-icons_size_m material-icons_dark-shade_75" type="button">expand_more</div>
+                    </div>
                   </div>
-                </div>
+            </div>
+            <div class="date-dropdown__calendar"> 
+                  <div class="calendar">
+                    <header class="calendar__header">
+                      <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_back</button><span class="text text_type_bold text_size_large text_dark-shade_100">Август 2019</span>
+                      <button class="calendar__swipe material-icons material-icons_color_purple material-icons_size_m" type="button">arrow_forward</button>
+                    </header>
+                    <div class="calendar__main">
+                      <div class="calendar__days-line text text_type_bold text_size_small text_color_purple"><span class="calendar__week-day">Пн</span><span class="calendar__week-day">Вт</span><span class="calendar__week-day">Ср</span><span class="calendar__week-day">Чт</span><span class="calendar__week-day">Пт</span><span class="calendar__week-day">Сб</span><span class="calendar__week-day">Вс</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day text-regular_dark_s">29</span><span class="calendar__day text-regular_dark_s">30</span><span class="calendar__day text-regular_dark_s">31</span><span class="calendar__day">1</span><span class="calendar__day">2</span><span class="calendar__day">3</span><span class="calendar__day">4</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">5</span><span class="calendar__day">6</span><span class="calendar__day">7</span><span class="calendar__day calendar__today">8</span><span class="calendar__day">9</span><span class="calendar__day">10</span><span class="calendar__day">11</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">12</span><span class="calendar__day">13</span><span class="calendar__day">14</span><span class="calendar__day">15</span><span class="calendar__day">16</span><span class="calendar__day">17</span><span class="calendar__day">18</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day calendar__selected-edge-day calendar__selected-left-edge-day">19</span><span class="calendar__day calendar__selected-day">20</span><span class="calendar__day calendar__selected-day">21</span><span class="calendar__day calendar__selected-day">22</span><span class="calendar__day calendar__selected-edge-day calendar__selected-right-edge-day">23</span><span class="calendar__day">24</span><span class="calendar__day">25</span>
+                      </div>
+                      <div class="calendar__days-line text text_type_regular text_size_small text_dark-shade_50"><span class="calendar__day">26</span><span class="calendar__day">27</span><span class="calendar__day">28</span><span class="calendar__day">29</span><span class="calendar__day">30</span><span class="calendar__day">31</span><span class="calendar__day text-regular_dark_s">1</span>
+                      </div>
+                      <div class="calendar__footer">
+                            <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Очистить</button>
+                            <button class="text-button text text_type_bold text_size_small text_color_purple text_uppercase" type="button">Применить</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
           </div>
               <div class="input-form dropdown dropdown_type_guests">
                 <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Гости</div>
@@ -500,15 +584,15 @@
                   <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Подписка</h3><span class="footer__text text text_type_regular text_size_medium text_dark-shade_75">
                Получайте специальные предложения и новости сервиса</span>
             <div class="footer__email">
-                  <div class="input-form text-form">
-                    <label>
-                      <div class="input-form__box input-form__box_size_260">
-                        <input class="text-form__input text text_dark-shade_25 text_size_medium text_type_regular" type="email" name="Email" placeholder="Email">
-                        <button class="text-form__arrow material-icons material-icons_size_m material-icons_gradient" type="button">
-                           arrow_forward</button>
-                      </div>
-                    </label>
-                  </div>
+                    <div class="input-form text-form">
+                      <label>
+                        <div class="input-form__box input-form__box_size_260">
+                          <input class="text-form__input text text_dark-shade_25 text_size_medium text_type_regular" type="email" name="Email" placeholder="Email">
+                          <button class="text-form__arrow material-icons material-icons_size_m material-icons_gradient" type="button">
+                             arrow_forward</button>
+                        </div>
+                      </label>
+                    </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,41 @@
+@keyframes background-toggle {
+  0% {
+    background-image: url(./background-images/image.png);
+  }
+
+  33% {
+    background-image: url(./background-images/image2.png);
+  }
+
+  66% {
+    background-image: url(./background-images/image3.png);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 830px;
+
+  padding: 70px 140px 18px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: background-toggle 27s steps(1) infinite;
+}
+
+.Landing-Page__note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+
+  line-height: 1.715em;
+}

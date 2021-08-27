@@ -1,4 +1,19 @@
 .date-dropdown {
+  position: relative;
+}
+
+.date-dropdown__date-interval {
   display: flex;
   gap: 20px;
+  margin-bottom: 5px;
+}
+
+.date-dropdown__calendar {
+  position: absolute;
+  display: none;
+  z-index: 10;
+}
+
+.date-dropdown__calendar_open {
+  display: block;
 }

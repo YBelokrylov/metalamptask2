@@ -6,6 +6,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src/pages'),
   entry: {
     'UI-Page': './UI-Page/UI-Page.js',
+    'Landing-Page': './Landing-Page/Landing-Page.js',
   },
   output: {
     filename: './[name]/[name].js',
@@ -67,9 +68,19 @@ module.exports = {
       template: './UI-Page/UI-Page.pug',
       chunks: ['UI-Page']
     }),
+    new HtmlWebpackPlugin({
+      filename: './Landing-Page/Landing-Page.html',
+      template: './Landing-Page/Landing-Page.pug',
+      chunks: ['Landing-Page']
+    }),
     new CopyPlugin({
       patterns: [
         { from: 'UI-Page/images', to: '../dist/Ui-Page/images' },
+      ],
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'Landing-Page/images', to: '../dist/Landing-Page/images' },
       ],
     }),
 
