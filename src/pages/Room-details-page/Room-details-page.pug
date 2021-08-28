@@ -5,10 +5,36 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
+    include ../../commonBlocks/room-features/room-features
   body 
     include ../../commonBlocks/header/header
+
     .Room-details-page__room-images
+      .Room-details-page__image-box
+      .Room-details-page__image-box
+      .Room-details-page__image-box
+
     main
-      
+      include ../../templates/booking-card/booking-card
+      +room-features(
+        [
+          {
+            materialIcon: "insert_emoticon",
+            title: "Комфорт",
+            text: "Шумопоглащающие стены"
+          },
+          {
+            materialIcon: "insert_emoticon",
+            title: "Комфорт",
+            text: "Шумопоглащающие стены"
+          },
+          {
+            materialIcon: "insert_emoticon",
+            title: "Комфорт",
+            text: "Шумопоглащающие стены"
+          },
+        ],
+        "Сведения о номере"
+      )
     footer
       include ../../commonBlocks/footer/footer

@@ -13,8 +13,9 @@ mixin room-features__item(materialIcon, title, text)
     span(class="room-features_head text text_type_bold text_size_medium text_dark-shade_75")= title
     span(class="room-features_description text text_type_regular text_size_medium text_dark-shade_75")=  text
 
-mixin room-features(roomFeatures)
+mixin room-features(roomFeatures, header)
   .room-features
+    h2(class="room-features__header text text_type_bold text_size_large text_dark-shade_100")= header
     each roomFeature in roomFeatures
       +room-features__item(roomFeature.materialIcon, roomFeature.title, roomFeature.text)
 
