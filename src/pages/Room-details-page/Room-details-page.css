@@ -25,3 +25,16 @@ body {
 main {
   padding: 70px 140px;
 }
+
+.Room-details-page__cancel-info {
+  display: grid;
+  gap: 20px;
+}
+
+.Room-details-page__header {
+  margin: 0;
+}
+
+.Room-details-page__paragraph {
+  margin: 0;
+}

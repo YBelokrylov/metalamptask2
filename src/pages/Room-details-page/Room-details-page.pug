@@ -6,6 +6,8 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
     include ../../commonBlocks/room-features/room-features
+    include ../../commonBlocks/comment-group/comment-group
+    include ../../commonBlocks/bullet-list/bullet-list
   body 
     include ../../commonBlocks/header/header
 
@@ -37,6 +39,47 @@ html(lang="ru")
         ],
         "Сведения о номере"
       )
+
+      +comment-group(
+        [
+          {
+            userPhotoUrl: "./images/comment.jpg",
+            userName: "Мурад Сарафанов",
+            uploadTime: "5 дней назад",
+            commentText: `Великолепный матрас на кровати в основной спальне! 
+            А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+            Выкрикивал комплименты повару — никто не жаловался из соседей.`,
+            numberOfLikes: "12",
+            likeIsPressed: true
+          },
+          {
+            userPhotoUrl: "./images/comment.jpg",
+            userName: "Патрисия Стёклышкова",
+            uploadTime: "Неделю назад",
+            commentText: `Обслуживание на высоте! Всё аккуратно, чисто. 
+            Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент`,
+            numberOfLikes: "2",
+             likeIsPressed: false
+          },
+        ], 
+        "Отзывы посетителей номера"
+      )
+
+      +bullet-list(
+        {
+          title: "Правила",
+          items: [
+            "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"
+          ]
+        }
+      )
+
+      div.Room-details-page__cancel-info
+        h2(class="Room-details-page__header text text_type_bold text_size_large text_dark-shade_100") Отмена
+        p(class="Room-details-page__paragraph text text_type_regular text_size_medium text_dark-shade_75")
+          |Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы 
+          |получите полный возврат за вычетом сбора за услуги.
+
 
     footer
       include ../../commonBlocks/footer/footer

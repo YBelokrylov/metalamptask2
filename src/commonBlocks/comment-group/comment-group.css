@@ -1,0 +1,18 @@
+.comment-group {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: baseline;
+  gap: 20px 0;
+}
+
+.comment-group__header {
+  margin: 0;
+}
+
+.comment-group__number-of-comments {
+  justify-self: end;
+}
+
+.comment-group__comment {
+  grid-column: 1/-1;
+}

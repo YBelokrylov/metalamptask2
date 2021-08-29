@@ -7,7 +7,9 @@ include ../like-button/like-button
     uploadTime: "5 дней назад",
     commentText: "Великолепный матрас на кровати в основной спальне! "
     + "А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. "
-    + "Выкрикивал комплименты повару — никто не жаловался из соседей."
+    + "Выкрикивал комплименты повару — никто не жаловался из соседей.",
+    numberOfLikes: "12",
+    likeIsPressed: true
   }
 
 mixin comment(commentData)
@@ -17,5 +19,5 @@ mixin comment(commentData)
       span(class="comment__user-name text text_type_bold text_size_medium text_dark-shade_75")= commentData.userName 
       span(class="comment__date text text_type_regular text_size_medium text_dark-shade_50")= commentData.uploadTime
     div(class="comment__like")
-      +like-button
+      +like-button(commentData.numberOfLikes, commentData.likeIsPressed)
     p(class="comment__text text text_type_regular text_size_medium text_dark-shade_50")= commentData.commentText

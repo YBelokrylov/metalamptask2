@@ -9,7 +9,7 @@ for (let button of buttons) {
       button.classList.remove('like-button_pressed');
 
       likeButtonHeart.classList.remove('like-button__heart_pressed');
-      likeButtonHeart.textContent = "favorite_border";
+      likeButtonHeart.textContent = 'favorite_border';
 
       likeButtonCount.classList.remove('like-button__count_pressed');
       likeButtonCount.textContent = Number(likeButtonCount.textContent) - 1;

@@ -1,7 +1,11 @@
-mixin like-button
-  button(type="button" class="like-button" data-is-pressed="false") 
-    span(class="like-button__heart material-icons material-icons_size_s material-icons_dark-shade_25") favorite_border
-    span(class="like-button__count text-regular text text_type_regular text_size_tiny text_dark-shade_25") 10
+mixin like-button(numberOfLikes, likeIsPressed)
+  button(type="button" class="like-button" class=(likeIsPressed ? "like-button_pressed":"") data-is-pressed=(likeIsPressed ? "true":"false")) 
+    span(class="like-button__heart material-icons material-icons_size_s material-icons_dark-shade_25" class=(likeIsPressed ? "like-button__heart_pressed":"")) 
+      if (likeIsPressed)
+        |favorite
+      else 
+        |favorite_border
+    span(class="like-button__count text-regular text text_type_regular text_size_tiny text_dark-shade_25" class=(likeIsPressed ? "like-button__count_pressed":""))= numberOfLikes
 
 
 
