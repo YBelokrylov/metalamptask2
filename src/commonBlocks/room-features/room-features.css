@@ -5,6 +5,10 @@
   width: fit-content;
 }
 
+.room-features__header {
+  margin: 0;
+}
+
 .room-features__item {
   display: grid;
   grid-template-columns: 48px auto;
@@ -15,6 +19,10 @@
   padding-bottom: 20px;
 
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
+
+.room-features__item:last-child {
+  border-bottom: none;
 }
 
 .room-features__icon {

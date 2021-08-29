@@ -16,6 +16,7 @@ html(lang="ru")
 
     main
       include ../../templates/booking-card/booking-card
+
       +room-features(
         [
           {
@@ -24,17 +25,18 @@ html(lang="ru")
             text: "Шумопоглащающие стены"
           },
           {
-            materialIcon: "insert_emoticon",
-            title: "Комфорт",
-            text: "Шумопоглащающие стены"
+            materialIcon: "location_city",
+            title: "Удобство",
+            text: "Окно в каждой из спален"
           },
           {
-            materialIcon: "insert_emoticon",
-            title: "Комфорт",
-            text: "Шумопоглащающие стены"
-          },
+            materialIcon: "whatshot",
+            title: "Уют",
+            text: "Номер оснащён камином"
+          }
         ],
         "Сведения о номере"
       )
+
     footer
       include ../../commonBlocks/footer/footer
