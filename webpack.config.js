@@ -9,6 +9,7 @@ module.exports = {
     'Landing-Page': './Landing-Page/Landing-Page.js',
     'Search-room-page': './Search-room-page/Search-room-page.js',
     'Room-details-page': './Room-details-page/Room-details-page.js',
+    'Registration-page': './Registration-page/Registration-page.js',
   },
   output: {
     filename: './[name]/[name].js',
@@ -85,6 +86,11 @@ module.exports = {
       template: './Room-details-page/Room-details-page.pug',
       chunks: ['Room-details-page']
     }),
+    new HtmlWebpackPlugin({
+      filename: './Registration-page/Registration-page.html',
+      template: './Registration-page/Registration-page.pug',
+      chunks: ['Registration-page']
+    }),
     new CopyPlugin({
       patterns: [
         { from: 'UI-Page/images', to: '../dist/Ui-Page/images' },
@@ -103,6 +109,11 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'Room-details-page/images', to: '../dist/Room-details-page/images' },
+      ],
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'Registration-page/images', to: '../dist/Registration-page/images' },
       ],
     }),
   ]
