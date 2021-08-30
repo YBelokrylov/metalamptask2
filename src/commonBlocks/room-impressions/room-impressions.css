@@ -1,0 +1,45 @@
+.room-impressions {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px 30px;
+  width: fit-content;
+  align-items: flex-end;
+}
+
+.room-impressions__title {
+  margin: 0;
+  grid-column: 1/-1;
+}
+
+.room-impressions__line {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.room-impressions__marker {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+}
+
+.room-impressions__line:nth-child(1) .room-impressions__marker {
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+
+.room-impressions__line:nth-child(2) .room-impressions__marker {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.room-impressions__line:nth-child(3) .room-impressions__marker {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.room-impressions__line:nth-child(4) .room-impressions__marker {
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
+
+.room-impressions__value {
+  line-height: 1.71em;
+}

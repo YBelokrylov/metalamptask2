@@ -1,0 +1,40 @@
+mixin room-impressions__line(value)
+  .room-impressions__line
+    span.room-impressions__marker
+    span(class="room-impressions__value text text_type_regular text_size_medium text_dark-shade_75")= value
+
+.room-impressions 
+  h2(class="room-impressions__title text text_type_bold text_size_large text_dark-shade_100") Впечатления от номера
+  svg(class="room-impressions__circle-diagram" width="120" height="120")
+    lineargradient#linear-gradient-green(x1="0" y1="0" x2="0" y2="1")
+      stop.stop1(offset="0%" stop-color="#6FCF97")
+      stop.stop2(offset="100%" stop-color="#66D2EA")
+    lineargradient#linear-gradient-orange(x1="0" y1="0" x2="0" y2="1")
+      stop.stop1(offset="0%" stop-color="#FFE39C")
+      stop.stop2(offset="100%" stop-color="#FFBA9C")
+    lineargradient#linear-gradient-purple(x1="0" y1="0" x2="0" y2="1")
+      stop.stop1(offset="0%" stop-color="#BC9CFF")
+      stop.stop2(offset="100%" stop-color="#8BA4F9")
+    path(d="M62 3\
+    A 57 57, 0, 0, 1, 118 59" 
+    stroke="url(#linear-gradient-purple)" stroke-width="4" fill-opacity="0")
+    path(d="M118 59\
+    A 57 57, 0, 0, 1, 118 61" 
+    stroke="transparent" stroke-width="4" fill-opacity="0")
+    path(d="M118 61\
+    A 57 57, 0, 0, 1, 62 118" 
+    stroke="url(#linear-gradient-green)" stroke-width="4" fill-opacity="0")
+    path(d="M62 118\
+    A 57 57, 0, 0, 1, 60 118" 
+    stroke="transparent" stroke-width="4" fill-opacity="0")
+    path(d="M60 118\
+    A 45 45, 0, 0, 1, 60 3" 
+    stroke="url(#linear-gradient-orange)" stroke-width="4" fill-opacity="0")
+    text(x="60" y="60" text-anchor="middle" class="text text_type_bold text_size_huge" fill="#BC9CFF") 260
+    text(x="60" y="80" text-anchor="middle" class="text text_type_bold text_size_small text_uppercase" fill="#BC9CFF") Голосов
+  .room-impressions__legend 
+    +room-impressions__line("Великолепно")
+    +room-impressions__line("Хорошо")
+    +room-impressions__line("Удовлетворительно")
+    +room-impressions__line("Разочарован")
+
