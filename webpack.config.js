@@ -10,6 +10,7 @@ module.exports = {
     'Search-room-page': './Search-room-page/Search-room-page.js',
     'Room-details-page': './Room-details-page/Room-details-page.js',
     'Registration-page': './Registration-page/Registration-page.js',
+    'Sign-in': './Sign-in/Sign-in.js',
   },
   output: {
     filename: './[name]/[name].js',
@@ -91,6 +92,11 @@ module.exports = {
       template: './Registration-page/Registration-page.pug',
       chunks: ['Registration-page']
     }),
+    new HtmlWebpackPlugin({
+      filename: './Sign-in/Sign-in.html',
+      template: './Sign-in/Sign-in.pug',
+      chunks: ['Sign-in']
+    }),
     new CopyPlugin({
       patterns: [
         { from: 'UI-Page/images', to: '../dist/Ui-Page/images' },
@@ -114,6 +120,11 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'Registration-page/images', to: '../dist/Registration-page/images' },
+      ],
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'Sign-in/images', to: '../dist/Sign-in/images' },
       ],
     }),
   ]
