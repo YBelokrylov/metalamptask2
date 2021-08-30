@@ -16,9 +16,7 @@ html(lang="ru")
       .Room-details-page__image-box
       .Room-details-page__image-box
 
-    main
-      include ../../templates/booking-card/booking-card
-
+    main.Room-details-page__main
       +room-features(
         [
           {
@@ -40,30 +38,36 @@ html(lang="ru")
         "Сведения о номере"
       )
 
-      +comment-group(
-        [
-          {
-            userPhotoUrl: "./images/comment.jpg",
-            userName: "Мурад Сарафанов",
-            uploadTime: "5 дней назад",
-            commentText: `Великолепный матрас на кровати в основной спальне! 
-            А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
-            Выкрикивал комплименты повару — никто не жаловался из соседей.`,
-            numberOfLikes: "12",
-            likeIsPressed: true
-          },
-          {
-            userPhotoUrl: "./images/comment.jpg",
-            userName: "Патрисия Стёклышкова",
-            uploadTime: "Неделю назад",
-            commentText: `Обслуживание на высоте! Всё аккуратно, чисто. 
-            Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент`,
-            numberOfLikes: "2",
-             likeIsPressed: false
-          },
-        ], 
-        "Отзывы посетителей номера"
-      )
+      include ../../commonBlocks/room-impressions/room-impressions
+      
+      .Room-details-page__booking-card
+        include ../../templates/booking-card/booking-card
+
+      .Room-details-page__comment-group
+        +comment-group(
+          [
+            {
+              userPhotoUrl: "./images/comment.jpg",
+              userName: "Мурад Сарафанов",
+              uploadTime: "5 дней назад",
+              commentText: `Великолепный матрас на кровати в основной спальне! 
+              А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+              Выкрикивал комплименты повару — никто не жаловался из соседей.`,
+              numberOfLikes: "12",
+              likeIsPressed: true
+            },
+            {
+              userPhotoUrl: "./images/comment.jpg",
+              userName: "Патрисия Стёклышкова",
+              uploadTime: "Неделю назад",
+              commentText: `Обслуживание на высоте! Всё аккуратно, чисто. 
+              Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент`,
+              numberOfLikes: "2",
+              likeIsPressed: false
+            },
+          ], 
+          "Отзывы посетителей номера"
+        )
 
       +bullet-list(
         {
@@ -79,7 +83,6 @@ html(lang="ru")
         p(class="Room-details-page__paragraph text text_type_regular text_size_medium text_dark-shade_75")
           |Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы 
           |получите полный возврат за вычетом сбора за услуги.
-
-      include ../../commonBlocks/room-impressions/room-impressions
+      
     footer
       include ../../commonBlocks/footer/footer

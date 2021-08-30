@@ -22,8 +22,22 @@ body {
   background-image: url("background-images/image3.png");
 }
 
-main {
+.Room-details-page__main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: flex-start;
+  gap: 30px 70px;
+
   padding: 70px 140px;
+}
+
+.Room-details-page__booking-card {
+  grid-column: 3;
+  grid-row: 1/3;
+}
+
+.Room-details-page__comment-group {
+  grid-column: 1/3;
 }
 
 .Room-details-page__cancel-info {
@@ -37,4 +51,6 @@ main {
 
 .Room-details-page__paragraph {
   margin: 0;
+
+  line-height: 1.71em;
 }
