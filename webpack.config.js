@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+let pages = ['UI-Page', 'Landing-Page', 'Search-room-page', 'Room-details-page', 'Registration-page', 'Sign-in'];
 
 module.exports = {
   context: path.resolve(__dirname, 'src/pages'),
@@ -67,65 +70,28 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      filename: './UI-Page/UI-Page.html',
-      template: './UI-Page/UI-Page.pug',
-      chunks: ['UI-Page']
-    }),
-    new HtmlWebpackPlugin({
-      filename: './Landing-Page/Landing-Page.html',
-      template: './Landing-Page/Landing-Page.pug',
-      chunks: ['Landing-Page']
-    }),
-    new HtmlWebpackPlugin({
-      filename: './Search-room-page/Search-room-page.html',
-      template: './Search-room-page/Search-room-page.pug',
-      chunks: ['Search-room-page']
-    }),
-    new HtmlWebpackPlugin({
-      filename: './Room-details-page/Room-details-page.html',
-      template: './Room-details-page/Room-details-page.pug',
-      chunks: ['Room-details-page']
-    }),
-    new HtmlWebpackPlugin({
-      filename: './Registration-page/Registration-page.html',
-      template: './Registration-page/Registration-page.pug',
-      chunks: ['Registration-page']
-    }),
-    new HtmlWebpackPlugin({
-      filename: './Sign-in/Sign-in.html',
-      template: './Sign-in/Sign-in.pug',
-      chunks: ['Sign-in']
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'UI-Page/images', to: '../dist/Ui-Page/images' },
-      ],
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'Landing-Page/images', to: '../dist/Landing-Page/images' },
-      ],
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'Search-room-page/images', to: '../dist/Search-room-page/images' },
-      ],
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'Room-details-page/images', to: '../dist/Room-details-page/images' },
-      ],
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'Registration-page/images', to: '../dist/Registration-page/images' },
-      ],
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'Sign-in/images', to: '../dist/Sign-in/images' },
-      ],
-    }),
-  ]
+    new CleanWebpackPlugin(),
+  ].concat(generateHtmlPages(pages))
+};
+
+function generateHtmlPages(names) {
+  let pagesPlagins = [];
+
+  for (let name of names) {
+    pagesPlagins.push(
+      new HtmlWebpackPlugin({
+        filename: './' + name + '/' + name + '.html',
+        template: './' + name + '/' + name + '.pug',
+        chunks: [name]
+      }),
+      new CopyPlugin({
+        patterns: [{ 
+          from: name + '/images', 
+          to: '../dist/' + name + '/images' 
+        }],
+      }),
+    )
+  }
+
+  return pagesPlagins;
 }
