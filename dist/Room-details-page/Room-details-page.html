@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Room details</title>
   <script defer src=".././Room-details-page/Room-details-page.js"></script></head>
   <body> 
     <header class="header"><img class="header__logo" src="./images/Logo.svg" alt="Logo">
@@ -33,34 +33,36 @@
                 <div class="room-features__item"><span class="room-features__icon material-icons material-icons_size_l material-icons_gradient">location_city</span><span class="room-features_head text text_type_bold text_size_medium text_dark-shade_75">Удобство</span><span class="room-features_description text text_type_regular text_size_medium text_dark-shade_75">Окно в каждой из спален</span></div>
                 <div class="room-features__item"><span class="room-features__icon material-icons material-icons_size_l material-icons_gradient">whatshot</span><span class="room-features_head text text_type_bold text_size_medium text_dark-shade_75">Уют</span><span class="room-features_description text text_type_regular text_size_medium text_dark-shade_75">Номер оснащён камином</span></div>
           </div>
-      <div class="room-impressions"> 
-        <h2 class="room-impressions__title text text_type_bold text_size_large text_dark-shade_100">Впечатления от номера</h2>
-        <svg class="room-impressions__circle-diagram" width="120" height="120">
-          <lineargradient id="linear-gradient-green" x1="0" y1="0" x2="0" y2="1">
-            <stop class="stop1" offset="0%" stop-color="#6FCF97"></stop>
-            <stop class="stop2" offset="100%" stop-color="#66D2EA"></stop>
-          </lineargradient>
-          <lineargradient id="linear-gradient-orange" x1="0" y1="0" x2="0" y2="1">
-            <stop class="stop1" offset="0%" stop-color="#FFE39C"></stop>
-            <stop class="stop2" offset="100%" stop-color="#FFBA9C"></stop>
-          </lineargradient>
-          <lineargradient id="linear-gradient-purple" x1="0" y1="0" x2="0" y2="1">
-            <stop class="stop1" offset="0%" stop-color="#BC9CFF"></stop>
-            <stop class="stop2" offset="100%" stop-color="#8BA4F9"></stop>
-          </lineargradient>
-          <path d="M62 3    A 57 57, 0, 0, 1, 118 59" stroke="url(#linear-gradient-purple)" stroke-width="4" fill-opacity="0"></path>
-          <path d="M118 59    A 57 57, 0, 0, 1, 118 61" stroke="transparent" stroke-width="4" fill-opacity="0"></path>
-          <path d="M118 61    A 57 57, 0, 0, 1, 62 118" stroke="url(#linear-gradient-green)" stroke-width="4" fill-opacity="0"></path>
-          <path d="M62 118    A 57 57, 0, 0, 1, 60 118" stroke="transparent" stroke-width="4" fill-opacity="0"></path>
-          <path d="M60 118    A 45 45, 0, 0, 1, 60 3" stroke="url(#linear-gradient-orange)" stroke-width="4" fill-opacity="0"></path>
-          <text class="text text_type_bold text_size_huge" x="60" y="60" text-anchor="middle" fill="#BC9CFF">260</text>
-          <text class="text text_type_bold text_size_small text_uppercase" x="60" y="80" text-anchor="middle" fill="#BC9CFF">Голосов</text>
-        </svg>
-        <div class="room-impressions__legend"> 
-                <div class="room-impressions__line"><span class="room-impressions__marker"></span><span class="room-impressions__value text text_type_regular text_size_medium text_dark-shade_75">Великолепно</span></div>
-                <div class="room-impressions__line"><span class="room-impressions__marker"></span><span class="room-impressions__value text text_type_regular text_size_medium text_dark-shade_75">Хорошо</span></div>
-                <div class="room-impressions__line"><span class="room-impressions__marker"></span><span class="room-impressions__value text text_type_regular text_size_medium text_dark-shade_75">Удовлетворительно</span></div>
-                <div class="room-impressions__line"><span class="room-impressions__marker"></span><span class="room-impressions__value text text_type_regular text_size_medium text_dark-shade_75">Разочарован</span></div>
+      <div class="Room-details-page__room-impressions">
+        <div class="room-impressions"> 
+          <h2 class="room-impressions__title text text_type_bold text_size_large text_dark-shade_100">Впечатления от номера</h2>
+          <svg class="room-impressions__circle-diagram" width="120" height="120">
+            <lineargradient id="linear-gradient-green" x1="0" y1="0" x2="0" y2="1">
+              <stop class="stop1" offset="0%" stop-color="#6FCF97"></stop>
+              <stop class="stop2" offset="100%" stop-color="#66D2EA"></stop>
+            </lineargradient>
+            <lineargradient id="linear-gradient-orange" x1="0" y1="0" x2="0" y2="1">
+              <stop class="stop1" offset="0%" stop-color="#FFE39C"></stop>
+              <stop class="stop2" offset="100%" stop-color="#FFBA9C"></stop>
+            </lineargradient>
+            <lineargradient id="linear-gradient-purple" x1="0" y1="0" x2="0" y2="1">
+              <stop class="stop1" offset="0%" stop-color="#BC9CFF"></stop>
+              <stop class="stop2" offset="100%" stop-color="#8BA4F9"></stop>
+            </lineargradient>
+            <path d="M62 3    A 57 57, 0, 0, 1, 118 59" stroke="url(#linear-gradient-purple)" stroke-width="4" fill-opacity="0"></path>
+            <path d="M118 59    A 57 57, 0, 0, 1, 118 61" stroke="transparent" stroke-width="4" fill-opacity="0"></path>
+            <path d="M118 61    A 57 57, 0, 0, 1, 62 118" stroke="url(#linear-gradient-green)" stroke-width="4" fill-opacity="0"></path>
+            <path d="M62 118    A 57 57, 0, 0, 1, 60 118" stroke="transparent" stroke-width="4" fill-opacity="0"></path>
+            <path d="M60 118    A 45 45, 0, 0, 1, 60 3" stroke="url(#linear-gradient-orange)" stroke-width="4" fill-opacity="0"></path>
+            <text class="text text_type_bold text_size_huge" x="60" y="60" text-anchor="middle" fill="#BC9CFF">260</text>
+            <text class="text text_type_bold text_size_small text_uppercase" x="60" y="80" text-anchor="middle" fill="#BC9CFF">Голосов</text>
+          </svg>
+          <div class="room-impressions__legend"> 
+                    <div class="room-impressions__line"><span class="room-impressions__marker"></span><span class="room-impressions__value text text_type_regular text_size_medium text_dark-shade_75">Великолепно</span></div>
+                    <div class="room-impressions__line"><span class="room-impressions__marker"></span><span class="room-impressions__value text text_type_regular text_size_medium text_dark-shade_75">Хорошо</span></div>
+                    <div class="room-impressions__line"><span class="room-impressions__marker"></span><span class="room-impressions__value text text_type_regular text_size_medium text_dark-shade_75">Удовлетворительно</span></div>
+                    <div class="room-impressions__line"><span class="room-impressions__marker"></span><span class="room-impressions__value text text_type_regular text_size_medium text_dark-shade_75">Разочарован</span></div>
+          </div>
         </div>
       </div>
       <div class="Room-details-page__booking-card">

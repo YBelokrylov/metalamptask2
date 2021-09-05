@@ -4,7 +4,7 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+    title Room details
     include ../../commonBlocks/room-features/room-features
     include ../../commonBlocks/comment-group/comment-group
     include ../../commonBlocks/bullet-list/bullet-list
@@ -38,7 +38,8 @@ html(lang="ru")
         "Сведения о номере"
       )
 
-      include ../../commonBlocks/room-impressions/room-impressions
+      .Room-details-page__room-impressions
+        include ../../commonBlocks/room-impressions/room-impressions
       
       .Room-details-page__booking-card
         include ../../templates/booking-card/booking-card
