@@ -25,10 +25,12 @@ body {
 .Room-details-page__main {
   display: grid;
   grid-template-columns: auto auto auto;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 30px 70px;
 
-  padding: 70px 140px;
+  padding: 70px 10%;
+  box-sizing: border-box;
 }
 
 .Room-details-page__booking-card {

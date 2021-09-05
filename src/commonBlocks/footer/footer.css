@@ -1,15 +1,12 @@
-.footer {
-  width: 100%;
-}
-
 .footer__main {
   display: grid;
-  grid-template-columns: 260px repeat(3, 160px) 260px;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 160px));
   justify-content: space-between;
-  gap: 40px;
+  grid-auto-rows: auto;
+  gap: 35px 35px;
 
-
-  padding: 100px 140px 95px 140px;
+  width: 100%;
+  padding: 100px 10% 95px 10%;
   box-sizing: border-box;
 
   background: #ffffff;
@@ -20,6 +17,10 @@
   display: grid;
   gap: 15px;
   align-content: flex-start;
+}
+
+.footer__item:nth-child(1) {
+  min-width: 260px;
 }
 
 .footer__text {
@@ -45,13 +46,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 
-  height: 70px;
-
-  padding: 0 140px;
+  padding: 23px 10%;
+  box-sizing: border-box;
 }
 
 .footer__icons {
   display: flex;
   gap: 20px;
 }
+
+

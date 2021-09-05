@@ -8,12 +8,18 @@
   <script defer src=".././Search-room-page/Search-room-page.js"></script></head>
   <body> 
     <header class="header"><img class="header__logo" src="./images/Logo.svg" alt="Logo">
-      <nav class="header__nav"><a class="header__link header__link_active text text_type_regular text_size_medium text_dark-shade_50">О нас</a>
-        <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Услуги</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Вакансии</a><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Новости</a>
-        <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Соглашения</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div>
-      </nav>
-          <button class="radius-button radius-button_border-gradient radius-button_size_tiny" type="button"><span class="radius-button__text text text_size_small text_type_bold text_color_purple text_uppercase">Войти</span></button>
-          <button class="radius-button radius-button_default radius-button_size_medium" type="button"><span class="radius-button__text text text_type_bold text_size_small text_color_white text_uppercase">Зарегистрироваться</span></button>
+      <input class="header__burger-checkbox" type="checkbox" name="header__burger-checkbox" id="header__burger-checkbox">
+      <label class="header__burger-button" for="header__burger-checkbox"></label>
+      <div class="header__main">
+        <nav class="header__nav"><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">О нас</a>
+          <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Услуги</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Вакансии</a><a class="header__link text text_type_regular text_size_medium text_dark-shade_50">Новости</a>
+          <div class="header__link-expand"><span class="header__link text text_type_regular text_size_medium text_dark-shade_50">Соглашения</span><span class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50">expand_more</span></div>
+        </nav>
+        <div class="header__buttons">
+              <button class="radius-button radius-button_border-gradient radius-button_size_tiny" type="button"><span class="radius-button__text text text_size_small text_type_bold text_color_purple text_uppercase">Войти</span></button>
+              <button class="radius-button radius-button_default radius-button_size_medium" type="button"><span class="radius-button__text text text_type_bold text_size_small text_color_white text_uppercase">Зарегистрироваться</span></button>
+        </div>
+      </div>
     </header>
     <main>
       <form class="Search-room-page__filter">
@@ -332,7 +338,7 @@
       <div class="footer">
         <div class="footer__main"> 
           <div class="footer__item"><img class="footer__logo" src="./images/Logo.svg" alt="Logo"><span class="footer__text text text_type_regular text_size_medium text_dark-shade_75">
-               Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</span></div>
+               Бронирование номеров в лучшем <br>отеле 2019 года по версии<br>ассоциации «Отельные взгляды»</span></div>
           <div class="footer__item">
                   <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Навигация</h3><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">О нас</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Новости</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Служба поддержки</a><a class="footer__link text text_type_regular text_size_medium text_dark-shade_75" href="#">Услуги</a>
           </div>
@@ -344,7 +350,7 @@
           </div>
           <div class="footer__item">
                   <h3 class="footer__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">Подписка</h3><span class="footer__text text text_type_regular text_size_medium text_dark-shade_75">
-               Получайте специальные предложения и новости сервиса</span>
+               Получайте специальные<br>предложения и новости сервиса</span>
             <div class="footer__email">
                     <div class="input-form text-form">
                       <label>
@@ -359,7 +365,7 @@
           </div>
         </div>
         <div class="footer__copyright-bar"><span class="text_type_regular text_size_medium text_dark-shade_75">Copyright © 2018 Toxin отель. Все права защищены.</span>
-          <div class="footer__icons"><span class="font-awesome">&#61593;</span><span class="font-awesome">&#61570;</span><span class="font-awesome">&#61805;</span></div>
+          <div class="footer__icons"><a class="footer__link" href="#"><span class="font-awesome">&#61593;</span></a><a class="footer__link" href="#"><span class="font-awesome">&#61570;</span></a><a class="footer__link" href="#"><span class="font-awesome">&#61805;</span></a></div>
         </div>
       </div>
     </footer>

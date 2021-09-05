@@ -4,17 +4,21 @@ include ../../radius-button/_default/radius-button_default
 header(class="header header_sign-in")
   img(src="./images/Logo.svg" alt="Logo" class="header__logo")
 
-  nav(class="header__nav")
-    a(class="header__link header__link_active text text_type_regular text_size_medium text_dark-shade_50") О нас
-    .header__link-expand
-      span(class="header__link text text_type_regular text_size_medium text_dark-shade_50") Услуги
-      span(class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50") expand_more
-    a(class="header__link text text_type_regular text_size_medium text_dark-shade_50") Вакансии
-    a(class="header__link text text_type_regular text_size_medium text_dark-shade_50") Новости
-    .header__link-expand
-      span(class="header__link text text_type_regular text_size_medium text_dark-shade_50") Соглашения
-      span(class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50") expand_more
-  
-  .header__user-name 
-    span(class="text text_type_regular text_size_medium text_dark-shade_50") Юлий Цезарь
+  input(type="checkbox", name="header__burger-checkbox", class="header__burger-checkbox", id="header__burger-checkbox")
+  label(class="header__burger-button" for="header__burger-checkbox")
+
+  .header__main
+    nav(class="header__nav")
+      a(class="header__link header__link_active text text_type_regular text_size_medium text_dark-shade_50") О нас
+      .header__link-expand
+        span(class="header__link text text_type_regular text_size_medium text_dark-shade_50") Услуги
+        span(class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50") expand_more
+      a(class="header__link text text_type_regular text_size_medium text_dark-shade_50") Вакансии
+      a(class="header__link text text_type_regular text_size_medium text_dark-shade_50") Новости
+      .header__link-expand
+        span(class="header__link text text_type_regular text_size_medium text_dark-shade_50") Соглашения
+        span(class="header__expand-more material-icons material-icons_size_m material-icons_dark-shade_50") expand_more
+    
+    .header__user-name 
+      span(class="text text_type_regular text_size_medium text_dark-shade_50") Юлий Цезарь
     
