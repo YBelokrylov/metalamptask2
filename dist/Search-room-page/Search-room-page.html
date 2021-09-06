@@ -22,6 +22,8 @@
       </div>
     </header>
     <main>
+      <input class="Search-room-page__filter-open-checkbox" type="checkbox" id="Search-room-page__filter-open-checkbox">
+      <label class="Search-room-page__filter-open-button" for="Search-room-page__filter-open-checkbox"> <span class="material-icons material-icons_size_m material-icons_dark-shade_50">expand_less</span><span class=" text text_type_regular text_size_small text_dark-shade_50">Все фильтры</span></label>
       <form class="Search-room-page__filter">
             <div class="input-form dropdown">
               <div class="input-form__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">даты пребывания в отеле</div>
@@ -58,14 +60,16 @@
                     </div>
                   </div>
                 </div>
-            <div class="price-range"><span class="price-range__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">диапазон цены</span>
-              <div class="price-range__price-distance"><span class="price-range__left-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">5000₽ - </span><span class="price-range__right-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">10000₽</span></div>
-              <div class="price-range__track"> 
-                <input class="price-range__input price-range__input-left" type="range" name="" min="0" max="150" value="50">
-                <input class="price-range__input price-range__input-right" type="range" name="" min="0" max="150" value="100">
-                <div class="price-range__range"> </div>
-              </div>
-            </div><span class="text text_type_regular text_size_small text_dark-shade_50">Стоимость за сутки пребывания в номере</span>
+        <div class="Search-room-page__price-range">
+              <div class="price-range"><span class="price-range__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">диапазон цены</span>
+                <div class="price-range__price-distance"><span class="price-range__left-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">5000₽ - </span><span class="price-range__right-price text text_type_regular text_size_small text_dark-shade_50 text_uppercase">10000₽</span></div>
+                <div class="price-range__track"> 
+                  <input class="price-range__input price-range__input-left" type="range" name="" min="0" max="150" value="50">
+                  <input class="price-range__input price-range__input-right" type="range" name="" min="0" max="150" value="100">
+                  <div class="price-range__range"> </div>
+                </div>
+              </div><span class="text text_type_regular text_size_small text_dark-shade_50">Стоимость за сутки пребывания в номере</span>
+        </div>
             <div class="checkbox-group">
               <div class="checkbox-group__header">
                 <div class="checkbox-group__title text text_type_bold text_size_small text_dark-shade_100 text_uppercase">правила дома</div>

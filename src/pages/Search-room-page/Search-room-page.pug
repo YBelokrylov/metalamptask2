@@ -15,16 +15,20 @@ html(lang="ru")
 
   body 
     include ../../commonBlocks/header/header
-
     main
+      input(type="checkbox", class="Search-room-page__filter-open-checkbox" id="Search-room-page__filter-open-checkbox")
+      label(class="Search-room-page__filter-open-button" for="Search-room-page__filter-open-checkbox") 
+        span(class="material-icons material-icons_size_m material-icons_dark-shade_50") expand_less
+        span(class=" text text_type_regular text_size_small text_dark-shade_50") Все фильтры
       form.Search-room-page__filter
         +dropdown("даты пребывания в отеле", "19 авг - 23 авг", "input-form__box_size_m")
 
         +dropdownGuests("input-form__box_size_m")
 
-        +price-range
-        span(class="text text_type_regular text_size_small text_dark-shade_50")
-          | Стоимость за сутки пребывания в номере
+        .Search-room-page__price-range
+          +price-range
+          span(class="text text_type_regular text_size_small text_dark-shade_50")
+            | Стоимость за сутки пребывания в номере
 
         +checkbox-group(
           {

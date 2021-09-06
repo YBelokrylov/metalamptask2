@@ -1,16 +1,96 @@
 main {
+  position: relative;
   display: flex;
   align-items: flex-start;
-  padding: 30px 140px 40px;
   gap: 60px;
+
+  padding: 30px 10% 40px;
 
   border-bottom: 1px solid rgba(31, 32, 65, 0.25);
 }
 
-.Search-room-page__filter {
-  display: grid;
-  gap: 20px;
+.Search-room-page__filter-open-checkbox {
+  position: absolute;
+  appearance: none;
 }
+
+.Search-room-page__filter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 100;
+  
+  padding-top: 4px;
+  background-color: #ffffff;
+}
+
+.Search-room-page__filter-open-button {
+  display: none;
+  grid-template-columns: auto auto;
+  place-items: center;
+
+  min-width: 40px;
+  height: 130px;
+  padding: 10px 0;
+  box-sizing: border-box;
+
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 22px;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+}
+
+.Search-room-page__filter-open-checkbox:checked ~ .Search-room-page__filter-open-button span:nth-child(1) {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1120px) {
+  main {
+    gap: 15px;
+  }
+
+  .Search-room-page__filter {
+    display: none;
+  } 
+
+  .Search-room-page__filter-open-checkbox:checked ~ .Search-room-page__filter {
+    display: flex;
+  }
+
+  .Search-room-page__filter-open-button {
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .Search-room-page__filter {
+    display: none;
+  } 
+
+  .Search-room-page__filter-open-checkbox:checked ~ .Search-room-page__filter {
+    display: flex;
+  }
+
+  .Search-room-page__filter-open-button {
+    display: grid;
+    
+    min-width: 130px;
+    height: 40px;
+    padding: 0 10px;
+
+    writing-mode: rl;
+  }
+
+  .Search-room-page__filter-open-button span:nth-child(1) {
+    transform: rotate(0deg);
+  }
+}
+
 
 .Search-room-page__search-header {
   margin: 0;
